@@ -1,6 +1,10 @@
 # React + Vite
 
+<<<<<<< HEAD
 Segunda modificación
+=======
+Esto es una modificación de pedrito por segunda vez
+>>>>>>> c27c8e5abdad69ed45bf3e50171e2996bac1876c
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
