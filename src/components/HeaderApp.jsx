@@ -19,7 +19,7 @@ function Header() {
           <Link to="/Combos">Combos Especiales</Link>
         </li>
         <li>
-          <Link to="#">Idiomas</Link> //Falta ver cómo hacerlo
+          <Link to="#">Idiomas</Link> {/* Falta ver cómo hacerlo */}
         </li>
         <li>
           <Link to="/FormularioContacto">Contacto</Link>
