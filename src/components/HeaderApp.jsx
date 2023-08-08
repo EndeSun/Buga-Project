@@ -13,7 +13,7 @@ function HeaderApp() {
   };
   
   return (
-    <>
+    <div>
       <HeaderContainer>
         <Logo src={logo} alt="Logo" />
         <Title>
@@ -47,7 +47,7 @@ function HeaderApp() {
           </Links>
         </BgDiv>
       </HeaderContainer>
-    </>
+    </div>
   );
 }
 
