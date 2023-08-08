@@ -29,7 +29,8 @@ function App() {
   return (
     <>
       {/* Header de la aplicación que no cambiará */}
-      <HeaderApp />
+      
+      <HeaderApp/>
       {/* Todas las rutas de la aplicación */}
       <Routes>
         <Route path='/' element={<Home/>} />
