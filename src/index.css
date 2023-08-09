@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Mínimo alto de la ventana */
+}
+
+/* Estilo para el contenido principal */
+main {
+  flex: 1; /* Ocupa el espacio disponible */
+}
+
+/* Estilo para el pie de página */
+footer {
+  flex-shrink: 0; /* No se encogerá */
+}
