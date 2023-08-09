@@ -11,7 +11,6 @@ import {
 function Home() {
   return (
     <>
-    <main>
       <section className="bg-slate-900 h-screen w-screen text-center overflow-hidden relative">
         <div className="z-30 relative h-full">
           <header>
@@ -20,10 +19,10 @@ function Home() {
             </h2>
             <ul>
               <li>
-                <Link className="no-underline border-[3px] backdrop-blur-sm rounded text-2xl text-slate-100 font-bold px-12 py-2 m-2 inline-block hover:bg-white hover:text-black" to="/Carta">Ver Carta</Link>
+                <Link className="no-underline border-[3px] backdrop-blur-sm rounded text-2xl text-slate-100 font-bold px-12 py-2 m-2 inline-block hover:bg-white hover:text-black hover:font-black" to="/Carta">Ver Carta</Link>
               </li>
               <li>
-                <Link className="no-underline border-[3px] backdrop-blur-sm rounded text-2xl font-bold  px-3 py-2 text-slate-100 inline-block hover:bg-white hover:text-black transition-colors" to="/SobreNosotros">Sobre Nosotros</Link>
+                <Link className="no-underline border-[3px] backdrop-blur-sm rounded text-2xl px-3 py-2 text-slate-100 inline-block hover:bg-white hover:text-black text-bold hover:font-black transition-colors" to="/SobreNosotros">Sobre Nosotros</Link>
               </li>
             </ul>
           </header>
@@ -39,7 +38,6 @@ function Home() {
           </video>
         </div>
       </section>
-      </main>
     </>
   );
 }
