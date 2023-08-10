@@ -14,10 +14,10 @@ function Footer() {
       {/* Tres divs grandes */}
 
       {/* Primer div  */}
-      <section className=" grid grid-cols-3 sm:grid-cols-7 border-b-4 py-4 px-20">
+      <section className="flex justify-center sm:justify-end border-b-4 py-4 px-20">
         {/*  agregando padding podemos resolver el problema del desbordamiento*/}
         {/* Div que envuelve a los iconos */}
-        <div className="flex justify-rigth sm:col-start-7 col-start-2 ">
+        <div className="flex justify-rigth">
           {/* Facebook */}
           <Link href="/" className="mr-6 text-blue-600">
             <svg
@@ -100,7 +100,7 @@ function Footer() {
           <h6 className="mb-4 text-2xl flex justify-center font-semibold uppercase md:justify-center">
             Contacto
           </h6>
-          <p className="mb-4 flex items-center justify-center ">
+          <p className="mb-4 pl-12 flex items-center sm:justify-center justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -112,7 +112,7 @@ function Footer() {
             </svg>
             Calle de San Miguel 51, 51000, Zaragoza, Spain
           </p>
-          <p className="mb-4 border-cyan-50 flex items-center justify-center">
+          <p className="mb-4 pl-12 border-cyan-50 flex sm:justify-center justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -124,7 +124,7 @@ function Footer() {
             </svg>
             bugaramenzaragoza@gmail.com
           </p>
-          <p className="mb-4 flex items-center justify-center ">
+          <p className="mb-4 pl-12 flex sm:justify-center justify-cen items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
