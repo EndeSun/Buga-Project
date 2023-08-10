@@ -8,7 +8,7 @@ import { HiCog, HiCurrencyDollar, HiLogout, HiViewGrid } from 'react-icons/hi';
 function HeaderApp() {
   return (
     <>
-      <Navbar fluid className="bg-neutral-950">
+      <Navbar fluid className="bg-neutral-950 w-screen">
         {/* Logo con el link del logo */}
         <Link className="no-underline" to="/">
             <img
