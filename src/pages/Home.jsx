@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <section className="bg-slate-900 h-screen w-screen text-center overflow-hidden relative">
-        <div className="z-30 relative h-full">
+        <div className="z-20 relative h-full">
           <header>
             <h2 className="text-white pt-40 text-[40px] font-medium">
               Disfruta de una experiencia inolvidable!
@@ -27,7 +27,9 @@ function Home() {
             </ul>
           </header>
         </div>
-        <div className="absolute top-0 bottom-0 h-full w-full z-10">
+
+        {/* Div que contiene al vídeo */}
+        <div className="absolute top-0 bottom-0 h-full w-full">
           <video
             className="object-center object-cover h-full w-full"
             autoPlay

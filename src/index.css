@@ -17,3 +17,7 @@ main {
 footer {
   flex-shrink: 0; /* No se encogerá */
 }
+
+.navBar2{
+  color: #f6c65e
+}
