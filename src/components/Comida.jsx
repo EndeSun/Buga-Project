@@ -1,4 +1,18 @@
 import React from "react";
+import Gluten from "./Allergen/Gluten";
+import Crustaceos from "./Allergen/Crustaceos";
+import Huevos from "./Allergen/Huevos";
+import Pescado from "./Allergen/Pescado";
+import Cacahuetes from "./Allergen/Cacahuetes";
+import Soja from "./Allergen/Soja";
+import Lacteos from "./Allergen/Lacteos";
+import FrutosCascara from "./Allergen/FrutosCascara";
+import Apio from "./Allergen/Apio";
+import Mostaza from "./Allergen/Mostaza";
+import Sesamo from "./Allergen/Sesamo";
+import Azufre from "./Allergen/Azufre";
+import Altramuces from "./Allergen/Altramuces";
+import Moluscos from "./Allergen/Moluscos";
 
 function Comida({
   source,
@@ -31,20 +45,25 @@ function Comida({
         <dd>{foodPrice} €</dd>
       </dl>
       <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+
+        {/* Gluten */}
+      <Gluten mostrar={false}/>
+      <Crustaceos/>
+      <Huevos/>
+      <Pescado/>
+      <Cacahuetes/>
+      <Soja/>
+      <Lacteos/>
+      <FrutosCascara/>
+      <Apio/>
+      <Mostaza/>
+      <Sesamo/>
+      <Azufre/>
+      <Altramuces/>
+      <Moluscos/>
+
+
+
       </div>
     </section>
   );
