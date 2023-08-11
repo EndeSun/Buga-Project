@@ -10,6 +10,9 @@ function Entrantes() {
         foodName="Ebi Furai"
         foodDescription="Gambas fritas al estilo japonés"
         foodPrice="12.8"
+        gluten={true}
+        crustaceos={true}
+        apio={true}
       />
     </>
   );

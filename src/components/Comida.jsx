@@ -19,51 +19,46 @@ function Comida({
   foodName,
   foodDescription,
   foodPrice,
-  gluten = true,
-  crustaceos = true,
-  huevos = true,
-  pescado = true,
-  cacahuetes = true,
-  soja = true,
-  lacteos = true,
-  frutosCascara = true,
-  apio = true,
-  mostaza = true,
-  sesamo = true,
-  azufre = true,
-  altramuces = true,
-  moluscos = true,
+  gluten = false,
+  crustaceos = false,
+  huevos = false,
+  pescado = false,
+  cacahuetes = false,
+  soja = false,
+  lacteos = false,
+  frutosCascara = false,
+  apio = false,
+  mostaza = false,
+  sesamo = false,
+  azufre = false,
+  altramuces = false,
+  moluscos = false,
 }) {
   return (
-    <section className="text-center">
+    <section className="text-center w-screen px-1.5 ">
       <div className="flex justify-center">
         <img src={source} alt={foodName} width="50%"></img>
       </div>
 
       <dl>
-        <dt>{foodDescription}</dt>
-        <dd>{foodPrice} €</dd>
+        <dt className="text-4xl">{foodDescription}</dt>
+        <dd className="text-3xl">{foodPrice} €</dd>
       </dl>
-      <div>
-
-        {/* Gluten */}
-      <Gluten mostrar={false}/>
-      <Crustaceos/>
-      <Huevos/>
-      <Pescado/>
-      <Cacahuetes/>
-      <Soja/>
-      <Lacteos/>
-      <FrutosCascara/>
-      <Apio/>
-      <Mostaza/>
-      <Sesamo/>
-      <Azufre/>
-      <Altramuces/>
-      <Moluscos/>
-
-
-
+      <div className="flex flex-row justify-center flex-wrap">
+      <Gluten mostrar={gluten}  className="w-1/12 h-auto" />
+      <Crustaceos mostrar={crustaceos}/>
+      <Huevos mostrar={huevos}/>
+      <Pescado mostrar={pescado}/>
+      <Cacahuetes mostrar={cacahuetes}/>
+      <Soja mostrar={soja}/>
+      <Lacteos mostrar={lacteos}/>
+      <FrutosCascara mostrar={frutosCascara}/>
+      <Apio mostrar={apio}/>
+      <Mostaza mostrar={mostaza}/>
+      <Sesamo mostrar={sesamo}/>
+      <Azufre mostrar={azufre}/>
+      <Altramuces mostrar={altramuces}/>
+      <Moluscos mostrar={moluscos}/>
       </div>
     </section>
   );

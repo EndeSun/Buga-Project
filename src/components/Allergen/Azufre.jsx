@@ -1,252 +1,201 @@
 import React from "react";
 
-function Azufre() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="262.205"
-      height="372.047"
-      version="1.1"
-    >
-      <g transform="translate(0 -680.315)">
-        <g fillOpacity="1" transform="translate(-784.273 -540.33) scale(4.103)">
-          <text
-            x="223.008"
-            y="364.433"
-            style={{
-              WebkitTextAlign: "center",
-              textAlign: "center",
-              lineHeight: "125%",
-            }}
-            fill="#000"
-            stroke="none"
-            fontFamily="Sans"
-            fontSize="15"
-            fontStyle="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            textAnchor="middle"
-            wordSpacing="0"
-            xmlSpace="preserve"
-          >
-            <tspan x="223.008" y="364.433" fontSize="5.5">
-              DIÓXIDO DE AZUFRE
-            </tspan>
-            <tspan x="223.008" y="371.308" fontSize="5.5">
-              Y SULFITOS
-            </tspan>
-          </text>
+function Azufre({mostrar}) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="320"
+        height="454"
+        viewBox="0 0 350 494"
+        className={mostrar ? "alergeno-visible" : "opacity-20"}
+      >
+        <defs>
+          <symbol overflow="visible">
+            <path d="M1.375 4.86v-24.266h13.781V4.859zm1.547-1.532h10.703v-21.187H2.922zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-1" overflow="visible">
+            <path d="M5.422-17.844v15.61h3.281c2.77 0 4.8-.625 6.094-1.875 1.289-1.258 1.937-3.243 1.937-5.954 0-2.687-.648-4.656-1.937-5.906-1.293-1.25-3.324-1.875-6.094-1.875zm-2.719-2.234h5.594c3.883 0 6.738.812 8.562 2.437 1.82 1.618 2.735 4.141 2.735 7.578 0 3.47-.918 6.016-2.75 7.641C15.02-.805 12.172 0 8.297 0H2.703zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-2" overflow="visible">
+            <path d="M2.703-20.078h2.719V0H2.703zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-3" overflow="visible">
+            <path d="M10.86-18.234c-1.97 0-3.54.742-4.704 2.218-1.156 1.47-1.734 3.47-1.734 6 0 2.532.578 4.532 1.734 6 1.164 1.47 2.735 2.204 4.703 2.204 1.977 0 3.54-.735 4.688-2.204 1.156-1.468 1.734-3.468 1.734-6 0-2.53-.578-4.53-1.734-6-1.149-1.476-2.711-2.218-4.688-2.218zm0-2.203c2.82 0 5.07.945 6.75 2.828 1.687 1.886 2.53 4.418 2.53 7.593 0 3.168-.843 5.696-2.53 7.579C15.93-.552 13.68.39 10.86.39c-2.825 0-5.087-.938-6.782-2.813-1.687-1.883-2.531-4.414-2.531-7.594 0-3.175.844-5.707 2.531-7.593 1.695-1.883 3.957-2.828 6.781-2.828zm.984-5.079h2.5l-3.078 3.547H9.219zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-4" overflow="visible">
+            <path d="M1.734-20.078h2.922l5 7.469 5.016-7.47h2.922l-6.469 9.642L18.015 0h-2.921l-5.64-8.531L3.75 0H.828L8-10.719zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-5" overflow="visible">
+            <path d="M10.86-18.234c-1.97 0-3.54.742-4.704 2.218-1.156 1.47-1.734 3.47-1.734 6 0 2.532.578 4.532 1.734 6 1.164 1.47 2.735 2.204 4.703 2.204 1.977 0 3.54-.735 4.688-2.204 1.156-1.468 1.734-3.468 1.734-6 0-2.53-.578-4.53-1.734-6-1.149-1.476-2.711-2.218-4.688-2.218zm0-2.203c2.82 0 5.07.945 6.75 2.828 1.687 1.886 2.53 4.418 2.53 7.593 0 3.168-.843 5.696-2.53 7.579C15.93-.552 13.68.39 10.86.39c-2.825 0-5.087-.938-6.782-2.813-1.687-1.883-2.531-4.414-2.531-7.594 0-3.175.844-5.707 2.531-7.593 1.695-1.883 3.957-2.828 6.781-2.828zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-7" overflow="visible">
+            <path d="M2.703-20.078h12.703v2.297H5.422v5.937H15v2.281H5.422v7.282h10.234V0H2.703zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-8" overflow="visible">
+            <path d="M9.422-17.39L5.734-7.407h7.391zM7.89-20.079h3.078L18.625 0h-2.828l-1.828-5.156H4.906L3.078 0H.218zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-9" overflow="visible">
+            <path d="M1.547-20.078h15.781V-18L4.625-2.281h13.016V0H1.234v-2.063L13.938-17.78H1.546zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-10" overflow="visible">
+            <path d="M2.39-20.078h2.735v12.203c0 2.148.39 3.695 1.172 4.64.781.95 2.047 1.422 3.797 1.422 1.738 0 3-.472 3.781-1.421.781-.946 1.172-2.493 1.172-4.641v-12.203h2.734v12.531c0 2.625-.652 4.606-1.953 5.938-1.293 1.336-3.203 2-5.734 2-2.543 0-4.465-.664-5.766-2-1.293-1.332-1.937-3.313-1.937-5.938zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-11" overflow="visible">
+            <path d="M2.703-20.078H14.25v2.297H5.422v5.906h7.969v2.297H5.42V0H2.704zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-12" overflow="visible">
+            <path d="M12.234-9.406c.582.199 1.149.62 1.704 1.265.55.649 1.101 1.532 1.656 2.657L18.359 0h-2.922L12.86-5.156c-.656-1.344-1.296-2.235-1.921-2.672-.626-.438-1.477-.656-2.547-.656H5.42V0H2.704v-20.078h6.14c2.29 0 4 .484 5.126 1.453 1.133.96 1.703 2.402 1.703 4.328 0 1.274-.293 2.324-.875 3.156-.586.836-1.438 1.414-2.563 1.735zm-6.812-8.438v7.125h3.422c1.312 0 2.3-.3 2.969-.906.664-.602 1-1.492 1-2.672 0-1.164-.336-2.047-1-2.64-.668-.602-1.657-.907-2.97-.907zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-13" overflow="visible">
+            <path d="M-.047-20.078H2.86l5.579 8.265 5.53-8.265h2.923L9.78-9.563V0H7.047v-9.563zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-14" overflow="visible">
+            <path d="M14.75-19.406v2.64a17.129 17.129 0 00-2.922-1.093 10.105 10.105 0 00-2.656-.375c-1.48 0-2.621.289-3.422.859-.805.574-1.203 1.39-1.203 2.453 0 .887.266 1.559.797 2.016.539.449 1.554.812 3.047 1.094l1.64.328c2.02.386 3.516 1.07 4.485 2.046.968.97 1.453 2.274 1.453 3.907 0 1.937-.656 3.414-1.969 4.422-1.305 1-3.215 1.5-5.734 1.5-.95 0-1.961-.11-3.032-.329A21.044 21.044 0 011.891-.89v-2.796c1.101.624 2.187 1.093 3.25 1.406 1.062.312 2.101.469 3.125.469 1.55 0 2.75-.301 3.593-.907.844-.613 1.266-1.488 1.266-2.625 0-.976-.305-1.742-.906-2.297-.606-.562-1.602-.984-2.985-1.265L7.578-9.22c-2.031-.406-3.5-1.035-4.406-1.89-.906-.864-1.36-2.063-1.36-3.594 0-1.781.625-3.18 1.875-4.203 1.258-1.02 2.989-1.532 5.188-1.532.938 0 1.895.09 2.875.266.977.168 1.977.422 3 .766zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-15" overflow="visible">
+            <path d="M2.703-20.078h2.719v17.797h9.781V0h-12.5zm0 0"></path>
+          </symbol>
+          <symbol id="glyph0-16" overflow="visible">
+            <path d="M-.078-20.078h17v2.297h-7.14V0H7.046v-17.781H-.078zm0 0"></path>
+          </symbol>
+          <symbol overflow="visible">
+            <path d="M2.5 8.86v-44.172h25.047V8.858zm2.813-2.797h19.453V-32.5H5.313zm0 0"></path>
+          </symbol>
+          <symbol id="glyph1-1" overflow="visible">
+            <path d="M4.594-36.5h25.422v7.11h-16v6.796h15.046v7.11H14.017v8.375h16.547V0H4.593zm0 0"></path>
+          </symbol>
+          <symbol id="glyph1-2" overflow="visible">
+            <path d="M2.719-17.969h15.36v7.11H2.718zm0 0"></path>
+          </symbol>
+          <symbol id="glyph1-3" overflow="visible">
+            <path d="M24.953-18.625L37.625 0h-9.813l-8.53-12.469L10.811 0H.954l12.672-18.625L1.437-36.5h9.844l8 11.75L27.25-36.5h9.89zm0 0"></path>
+          </symbol>
+        </defs>
+        <g>
+          <use x="16.832" y="335.158" xlinkHref="#glyph0-1"></use>
+          <use x="38.052" y="335.158" xlinkHref="#glyph0-2"></use>
+          <use x="46.18" y="335.158" xlinkHref="#glyph0-3"></use>
+          <use x="66.108" y="335.158" xlinkHref="#glyph0-4"></use>
+          <use x="84.989" y="335.158" xlinkHref="#glyph0-2"></use>
+          <use x="93.117" y="335.158" xlinkHref="#glyph0-1"></use>
+          <use x="114.337" y="335.158" xlinkHref="#glyph0-5"></use>
+          <use x="136.027" y="335.158" xlinkHref="#glyph0-6"></use>
+          <use x="144.787" y="335.158" xlinkHref="#glyph0-1"></use>
+          <use x="166.006" y="335.158" xlinkHref="#glyph0-7"></use>
+          <use x="183.419" y="335.158" xlinkHref="#glyph0-6"></use>
+          <use x="192.179" y="335.158" xlinkHref="#glyph0-8"></use>
+          <use x="211.03" y="335.158" xlinkHref="#glyph0-9"></use>
+          <use x="229.91" y="335.158" xlinkHref="#glyph0-10"></use>
+          <use x="250.083" y="335.158" xlinkHref="#glyph0-11"></use>
+          <use x="265.934" y="335.158" xlinkHref="#glyph0-12"></use>
+          <use x="285.083" y="335.158" xlinkHref="#glyph0-7"></use>
           <g>
-            <path
-              fill="#82104e"
-              stroke="#82104e"
-              strokeDasharray="none"
-              strokeDashoffset="0"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeMiterlimit="4"
-              strokeOpacity="1"
-              strokeWidth="3"
-              d="M39.937 29.288c0 10.339-8.222 18.72-18.364 18.72-10.142 0-18.364-8.381-18.364-18.72 0-10.34 8.222-18.72 18.364-18.72 10.142 0 18.364 8.38 18.364 18.72z"
-              transform="matrix(1.04033 0 0 1.02051 200.656 305.053)"
-            ></path>
-            <g transform="translate(-290.436 304.96)">
-              <g
-                fill="#fff"
-                stroke="none"
-                fontFamily="Sans"
-                fontSize="40"
-                fontStyle="normal"
-                fontWeight="normal"
-                letterSpacing="0"
-                wordSpacing="0"
-              >
-                <text
-                  xmlSpace="preserve"
-                  style={{ lineHeight: "125%" }}
-                  x="504.791"
-                  y="23.955"
-                >
-                  <tspan
-                    x="504.791"
-                    y="23.955"
-                    style={{ InkscapeFontSpecification: "Sans Bold" }}
-                    fill="#fff"
-                    fillOpacity="1"
-                    fontSize="10"
-                    fontWeight="bold"
-                  >
-                    E
-                  </tspan>
-                </text>
-                <text
-                  xmlSpace="preserve"
-                  style={{ lineHeight: "125%" }}
-                  x="510.72"
-                  y="24.006"
-                >
-                  <tspan
-                    x="510.72"
-                    y="24.006"
-                    style={{ InkscapeFontSpecification: "Sans Bold" }}
-                    fill="#fff"
-                    fillOpacity="1"
-                    fontSize="10"
-                    fontWeight="bold"
-                  >
-                    -
-                  </tspan>
-                </text>
-                <text
-                  xmlSpace="preserve"
-                  style={{ lineHeight: "125%" }}
-                  x="513.887"
-                  y="23.955"
-                >
-                  <tspan
-                    x="513.887"
-                    y="23.955"
-                    style={{ InkscapeFontSpecification: "Sans Bold" }}
-                    fill="#fff"
-                    fillOpacity="1"
-                    fontSize="10"
-                    fontWeight="bold"
-                  >
-                    X
-                  </tspan>
-                </text>
-              </g>
-              <path
-                fill="#fff"
-                stroke="#fff"
-                strokeDasharray="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M519.66 43.213l-.019-1.26 6.03-3.583-.076-7.437-5.992-3.393-.016-1.377-.918-.003v1.35l-5.178 3.018-5.272-3.053.022-1.29-.877-.016v1.29l-5.984 3.43-.052 7.576 6.03 3.49-.003 1.23.91.033-.008-1.273 5.156-3.037 5.253 2.993-.038 1.337z"
-              ></path>
-              <path
-                fill="#82104e"
-                stroke="#82104e"
-                strokeDasharray="none"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M507.849 29.12l4.803 2.78.013 5.554-4.874 2.911-4.878-2.814.022-5.711z"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#fff"
-                strokeDasharray="none"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M503.851 32.183l.477.802 3.71-2.156-.447-.792z"
-              ></path>
-              <path
-                fill="#82104e"
-                stroke="#82104e"
-                strokeDasharray="none"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M519.275 28.82l4.803 2.78.013 5.555-4.874 2.91-4.878-2.813.022-5.712z"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#fff"
-                strokeDasharray="none"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M515.197 32.174l.476.802 3.711-2.156-.447-.792z"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#fff"
-                strokeDasharray="none"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M522.397 32.566l.887.017-.018 4.487-3.918 2.322-.444-.815 3.476-1.968z"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#fff"
-                strokeDasharray="none"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.05"
-                d="M511.005 32.557l.975.018-.018 4.486-3.919 2.323-.514-.763 3.476-1.986z"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#82104e"
-                strokeDasharray="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.779"
-                d="M501.389 28.693c0 .731-.608 1.324-1.358 1.324-.75 0-1.357-.593-1.357-1.324 0-.732.608-1.324 1.357-1.324.75 0 1.358.592 1.358 1.324z"
-                transform="matrix(1.01493 0 0 1.0402 -5.206 1.747)"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#82104e"
-                strokeDasharray="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.779"
-                d="M501.389 28.693c0 .731-.608 1.324-1.358 1.324-.75 0-1.357-.593-1.357-1.324 0-.732.608-1.324 1.357-1.324.75 0 1.358.592 1.358 1.324z"
-                transform="matrix(1.01493 0 0 1.0402 -5.27 7.98)"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#82104e"
-                strokeDasharray="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.779"
-                d="M501.389 28.693c0 .731-.608 1.324-1.358 1.324-.75 0-1.357-.593-1.357-1.324 0-.732.608-1.324 1.357-1.324.75 0 1.358.592 1.358 1.324z"
-                transform="matrix(1.01493 0 0 1.0402 5.999 8.284)"
-              ></path>
-              <path
-                fill="#fff"
-                stroke="#82104e"
-                strokeDasharray="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeMiterlimit="4"
-                strokeOpacity="1"
-                strokeWidth="0.779"
-                d="M501.389 28.693c0 .731-.608 1.324-1.358 1.324-.75 0-1.357-.593-1.357-1.324 0-.732.608-1.324 1.357-1.324.75 0 1.358.592 1.358 1.324z"
-                transform="matrix(1.01493 0 0 1.0402 17.348 8.152)"
-              ></path>
-            </g>
+            <use x="80.355" y="369.584" xlinkHref="#glyph0-13"></use>
+            <use x="97.19" y="369.584" xlinkHref="#glyph0-6"></use>
+            <use x="105.95" y="369.584" xlinkHref="#glyph0-14"></use>
+            <use x="123.446" y="369.584" xlinkHref="#glyph0-10"></use>
+            <use x="143.618" y="369.584" xlinkHref="#glyph0-15"></use>
+            <use x="158.97" y="369.584" xlinkHref="#glyph0-11"></use>
+            <use x="174.821" y="369.584" xlinkHref="#glyph0-2"></use>
+            <use x="182.95" y="369.584" xlinkHref="#glyph0-16"></use>
+            <use x="199.785" y="369.584" xlinkHref="#glyph0-5"></use>
+            <use x="221.474" y="369.584" xlinkHref="#glyph0-14"></use>
           </g>
+          <path
+            fill="#82104E"
+            stroke="#82104E"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="3"
+            d="M39.937 29.288c0 10.339-8.222 18.72-18.364 18.72-10.142 0-18.364-8.381-18.364-18.72 0-10.34 8.222-18.72 18.364-18.72 10.142 0 18.364 8.38 18.364 18.72zm0 0"
+            transform="matrix(5.2134 0 0 5.11015 47.656 37.82)"
+          ></path>
+          <g fill="#FFF">
+            <use x="116.305" y="157.304" xlinkHref="#glyph1-1"></use>
+          </g>
+          <g fill="#FFF">
+            <use x="146.02" y="157.562" xlinkHref="#glyph1-2"></use>
+          </g>
+          <g fill="#FFF">
+            <use x="161.887" y="157.304" xlinkHref="#glyph1-3"></use>
+          </g>
+          <path
+            fill="#FFF"
+            stroke="#FFF"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="0.05"
+            d="M519.66 43.213l-.019-1.26 6.03-3.583-.076-7.437-5.992-3.392-.016-1.378-.919-.002v1.35l-5.176 3.017-5.273-3.053.022-1.29-.878-.017v1.29l-5.983 3.432-.052 7.575 6.03 3.49-.003 1.231.91.032-.008-1.274 5.155-3.036 5.254 2.993-.038 1.337zm0 0"
+            transform="matrix(5.0113 0 0 5.00742 -2413.354 37.35)"
+          ></path>
+          <path
+            fill="#82104E"
+            stroke="#82104E"
+            strokeWidth="0.05"
+            d="M507.849 29.12l4.802 2.779.014 5.556-4.874 2.91-4.878-2.813.022-5.712zm0 0"
+            transform="matrix(5.0113 0 0 5.00742 -2413.354 37.35)"
+          ></path>
+          <path
+            fill="#FFF"
+            stroke="#FFF"
+            strokeWidth="0.05"
+            d="M503.851 32.183l.476.802 3.711-2.156-.446-.792zm0 0"
+            transform="matrix(5.0113 0 0 5.00742 -2413.354 37.35)"
+          ></path>
+          <path
+            fill="#82104E"
+            stroke="#82104E"
+            strokeWidth="0.05"
+            d="M519.275 28.82l4.803 2.78.013 5.554-4.874 2.912-4.878-2.814.023-5.712zm0 0"
+            transform="matrix(5.0113 0 0 5.00742 -2413.354 37.35)"
+          ></path>
+          <path
+            fill="#FFF"
+            stroke="#FFF"
+            strokeWidth="0.05"
+            d="M515.197 32.174l.476.802 3.71-2.157-.446-.791zm0 0M522.397 32.566l.887.017-.018 4.486-3.919 2.324-.443-.816 3.475-1.969zm0 0M511.004 32.557l.976.018-.018 4.486-3.919 2.322-.514-.762 3.475-1.986zm0 0"
+            transform="matrix(5.0113 0 0 5.00742 -2413.354 37.35)"
+          ></path>
+          <path
+            fill="#FFF"
+            stroke="#82104E"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="0.779"
+            d="M501.388 28.693c0 .731-.607 1.324-1.357 1.324s-1.357-.593-1.357-1.324c0-.732.608-1.324 1.357-1.324.75 0 1.357.592 1.357 1.324zm0 0"
+            transform="matrix(5.0861 0 0 5.20875 -2439.444 46.096)"
+          ></path>
+          <path
+            fill="#FFF"
+            stroke="#82104E"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="0.779"
+            d="M501.389 28.693c0 .73-.608 1.324-1.357 1.324-.75 0-1.358-.593-1.358-1.324 0-.731.608-1.325 1.358-1.325.75 0 1.357.594 1.357 1.325zm0 0"
+            transform="matrix(5.0861 0 0 5.20875 -2439.762 77.308)"
+          ></path>
+          <path
+            fill="#FFF"
+            stroke="#82104E"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="0.779"
+            d="M501.389 28.693c0 .731-.608 1.324-1.357 1.324-.75 0-1.358-.593-1.358-1.324 0-.731.608-1.324 1.358-1.324.75 0 1.357.593 1.357 1.324zm0 0"
+            transform="matrix(5.0861 0 0 5.20875 -2383.294 78.83)"
+          ></path>
+          <path
+            fill="#FFF"
+            stroke="#82104E"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="0.779"
+            d="M501.389 28.693c0 .731-.608 1.324-1.358 1.324-.75 0-1.357-.593-1.357-1.324 0-.731.608-1.325 1.357-1.325.75 0 1.358.594 1.358 1.325zm0 0"
+            transform="matrix(5.0861 0 0 5.20875 -2326.416 78.171)"
+          ></path>
         </g>
-      </g>
-    </svg>
-  );
+      </svg>
+    );
 }
 
 export default Azufre;

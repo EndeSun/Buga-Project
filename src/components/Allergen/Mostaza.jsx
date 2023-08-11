@@ -1,12 +1,13 @@
 import React from "react";
 
-function Mostaza() {
+function Mostaza({mostrar}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="262.205"
       height="372.047"
       version="1.1"
+      className={mostrar ? "alergeno-visible" : "opacity-20"}
     >
       <g transform="translate(0 -680.315)">
         <g transform="matrix(5.48369 0 0 5.48369 -1151.29 -1136.02)">

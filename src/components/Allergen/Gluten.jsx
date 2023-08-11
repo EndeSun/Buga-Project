@@ -7,7 +7,7 @@ function Gluten({mostrar}) {
           width="262.205"
           height="372.047"
           version="1.1"
-          className={mostrar ? "hidden" : "opacity-20"}
+          className={mostrar ? "alergeno-visible" : "opacity-20"}
         >
           <g transform="translate(0 -680.315)">
             <g transform="matrix(5.57663 0 0 5.57663 -1170.757 -1021.573)">
@@ -17,7 +17,7 @@ function Gluten({mostrar}) {
                 strokeLinejoin="round"
                 strokeMiterlimit="4"
                 strokeOpacity="1"
-                transform="translate(212.249 301.517)"
+                transform="translate(212.249 305.517)"
               >
                 <path
                   fill="#f47039"
@@ -53,10 +53,7 @@ function Gluten({mostrar}) {
                 wordSpacing="0"
                 xmlSpace="preserve"
               >
-                <tspan x="233.473" y="360.134" fontSize="5.5">
-                  CONTIENE
-                </tspan>
-                <tspan x="233.473" y="367.009" fontSize="5.5">
+                <tspan x="233.473" y="363.009" fontSize="5.5">
                   GLUTEN
                 </tspan>
               </text>
