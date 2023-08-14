@@ -12,7 +12,6 @@ export default {
       razha: ['Rozha One, serif']
       
     },
-    extend: {},
   },
   plugins: [require('flowbite/plugin')],
 }
