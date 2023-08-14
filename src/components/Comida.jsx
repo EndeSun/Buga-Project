@@ -5,6 +5,7 @@ function Comida({
   foodName,
   foodDescription,
   foodPrice,
+  ramen = false,
   gluten = false,
   crustaceos = false,
   huevos = false,
@@ -27,16 +28,20 @@ function Comida({
           <dt className="text-orange-700 text-4xl lg:text-4xl m-6 ">
             {foodName} <span>{foodPrice} €</span>
           </dt>
+          <dd className={ramen ? "text-orange-700 text-4xl lg:text-4xl m-6 text-left bg-gray-400 rounded-md p-2":"hidden"}>Información Ramen</dd>
         </dl>
+
+        
 
         <div className="flex justify-center">
           <img src={source} alt={foodName} width="50%" className="w-full"></img>
         </div>
 
-        <p className="text-orange-700 text-2xl lg:text-4xl">
+        <p className="text-orange-700 text-2xl lg:text-4xl text-left mx-8">
           {foodDescription}{" "}
         </p>
 
+        {/* Div de los alérgenos */}
         <div>
           <div className="primera-fila flex flex-row justify-center flex-wrap">
             <img
@@ -155,6 +160,7 @@ function Comida({
             ></img>
           </div>
         </div>
+
       </section>
     </div>
   );
