@@ -1,18 +1,4 @@
 import React from "react";
-import Gluten from "./Allergen/Gluten";
-import Crustaceos from "./Allergen/Crustaceos";
-import Huevos from "./Allergen/Huevos";
-import Pescado from "./Allergen/Pescado";
-import Cacahuetes from "./Allergen/Cacahuetes";
-import Soja from "./Allergen/Soja";
-import Lacteos from "./Allergen/Lacteos";
-import FrutosCascara from "./Allergen/FrutosCascara";
-import Apio from "./Allergen/Apio";
-import Mostaza from "./Allergen/Mostaza";
-import Sesamo from "./Allergen/Sesamo";
-import Azufre from "./Allergen/Azufre";
-import Altramuces from "./Allergen/Altramuces";
-import Moluscos from "./Allergen/Moluscos";
 
 function Comida({
   source,
@@ -35,32 +21,142 @@ function Comida({
   moluscos = false,
 }) {
   return (
-    <section className="text-center w-screen px-1.5 ">
-      <div className="flex justify-center">
-        <img src={source} alt={foodName} width="50%"></img>
-      </div>
+    <div className="flex justify-center">
+      <section className="text-center px-1.5 mb-6 mt-2  w-3/4 rounded-2xl hover:shadow-orange-300 hover:shadow-2xl hover:duration-700 border-zinc-950 border-8 bg-slate-100 font-razha">
+        <dl>
+          <dt className="text-orange-700 text-4xl lg:text-4xl m-6 ">
+            {foodName} <span>{foodPrice} €</span>
+          </dt>
+        </dl>
 
-      <dl>
-        <dt className="text-4xl">{foodDescription}</dt>
-        <dd className="text-3xl">{foodPrice} €</dd>
-      </dl>
-      <div className="flex flex-row justify-center flex-wrap">
-      <Gluten mostrar={gluten}  className="w-1/12 h-auto" />
-      <Crustaceos mostrar={crustaceos}/>
-      <Huevos mostrar={huevos}/>
-      <Pescado mostrar={pescado}/>
-      <Cacahuetes mostrar={cacahuetes}/>
-      <Soja mostrar={soja}/>
-      <Lacteos mostrar={lacteos}/>
-      <FrutosCascara mostrar={frutosCascara}/>
-      <Apio mostrar={apio}/>
-      <Mostaza mostrar={mostaza}/>
-      <Sesamo mostrar={sesamo}/>
-      <Azufre mostrar={azufre}/>
-      <Altramuces mostrar={altramuces}/>
-      <Moluscos mostrar={moluscos}/>
-      </div>
-    </section>
+        <div className="flex justify-center">
+          <img src={source} alt={foodName} width="50%" className="w-full"></img>
+        </div>
+
+        <p className="text-orange-700 text-2xl lg:text-4xl">
+          {foodDescription}{" "}
+        </p>
+
+        <div>
+          <div className="primera-fila flex flex-row justify-center flex-wrap">
+            <img
+              src="../src/assets/alergenos/gluten.svg"
+              className={
+                gluten
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/crustaceos.svg"
+              className={
+                crustaceos
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/huevos.svg"
+              className={
+                huevos
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/pescado.svg"
+              className={
+                pescado
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/cacahuetes.svg"
+              className={
+                cacahuetes
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/soja.svg"
+              className={
+                soja
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/lacteos.svg"
+              className={
+                lacteos
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+          </div>
+          <div className="Segunda-fila flex flex-row justify-center flex-wrap pb-8">
+            <img
+              src="../src/assets/alergenos/frutosCascara.svg"
+              className={
+                frutosCascara
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/apio.svg"
+              className={
+                apio
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/mostaza.svg"
+              className={
+                mostaza
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/sesamo.svg"
+              className={
+                sesamo
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/azufre.svg"
+              className={
+                azufre
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/altramuces.svg"
+              className={
+                altramuces
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+            <img
+              src="../src/assets/alergenos/moluscos.svg"
+              className={
+                moluscos
+                  ? "alergeno-visible w-1/12 h-1/6"
+                  : "opacity-20 w-1/12 h-1/6"
+              }
+            ></img>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
