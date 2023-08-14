@@ -9,10 +9,11 @@ export default {
     fontFamily: {
       sans: ['Gotham SSm A, sans-serif'],
       lato: ['Lato, sans-serif'],
-      razha: ['Rozha One, serif']
-      
+      razha: ['Rozha One, serif'],
+      sans : ['PT Sans']
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [require('flowbite/plugin')],
 }
