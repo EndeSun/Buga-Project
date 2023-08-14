@@ -34,6 +34,10 @@ function Entrantes() {
 
   return (
     <>
+      <motion.h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 mt-8" style={{opacity}}>
+        Entrantes
+      </motion.h1>
+
       <Comida
         source="../src/assets/Entrantes/Ebi furai.png"
         foodName="Ebi Furai"

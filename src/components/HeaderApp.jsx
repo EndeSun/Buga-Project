@@ -30,37 +30,37 @@ function HeaderApp() {
         <Navbar.Collapse>
           <Link
             to="/Entrantes"
-            className="navBar2 p-1 no-underline rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 border-b-2 border-b-red-950 md:text-xl lg:text-3xl md:border-none md:shadow-md md:shadow-orange-300"
+            className="navBar2 p-1 no-underline rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-xl lg:text-3xl md:border-none md:shadow-md md:shadow-orange-300"
           >
             Entrantes
           </Link>
           <Link
             to="/Ramen"
-            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 border-b-2 border-b-red-950 md:text-xl lg:text-3xl md:border-none md:shadow-md md:shadow-orange-300"
+            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-xl lg:text-3xl md:border-none md:shadow-md md:shadow-orange-300"
           >
             Ramen
           </Link>
           <Link
             to="/Don"
-            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 border-b-2 border-b-red-950 md:text-xl lg:text-3xl md:border-none lg:m-4 md:shadow-md md:shadow-orange-300"
+            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-xl lg:text-3xl md:border-none lg:m-4 md:shadow-md md:shadow-orange-300"
           >
             Don Style
           </Link>
           <Link
             to="/Combos"
-            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 border-b-2 border-b-red-950 md:text-xl lg:text-3xl md:border-none lg:m-4 md:shadow-md md:shadow-orange-300"
+            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-xl lg:text-3xl md:border-none lg:m-4 md:shadow-md md:shadow-orange-300"
           >
             Combos
           </Link>
           <Link
             to="/"
-            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 border-b-2 border-b-red-950 md:text-4xl md:borderc-none md:hidden md:shadow-md md:shadow-orange-300"
+            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-4xl md:borderc-none md:hidden md:shadow-md md:shadow-orange-300"
           >
             Idiomas
           </Link>
           <Link
             to="/FormularioContacto"
-            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 border-b-2 border-b-red-950 md:text-4xl md:border-none md:hidden md:shadow-md md:shadow-orange-300"
+            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-4xl md:border-none md:hidden md:shadow-md md:shadow-orange-300"
           >
             Contacto
           </Link>
