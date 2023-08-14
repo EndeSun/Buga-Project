@@ -7,10 +7,12 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ['Gotham SSm A, sans-serif']
+      sans: ['Gotham SSm A, sans-serif'],
+      lato: ['Lato, sans-serif'],
+      razha: ['Rozha One, serif']
+      
     },
     extend: {},
   },
   plugins: [require('flowbite/plugin')],
 }
-

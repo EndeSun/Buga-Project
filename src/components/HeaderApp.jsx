@@ -10,7 +10,7 @@ function HeaderApp() {
     <>
       <Navbar fluid className="bg-neutral-950 w-screen">
         {/* Logo con el link del logo */}
-        <Link className="no-underline hover:brightness-125" to="/">
+        <Link className="no-underline hover:brightness-125 hover:duration-700" to="/">
             <img
               alt="Logo de Buga Ramen"
               src="../src/assets/logo.png"
@@ -20,7 +20,7 @@ function HeaderApp() {
 
         {/* Logo del menú */}
         <div className="flex md:order-2">
-          <Navbar.Toggle/>
+          <Navbar.Toggle className="hover:duration-700"/>
         </div>
 
         
