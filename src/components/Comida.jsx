@@ -22,7 +22,7 @@ function Comida({
 }) {
   return (
     <div className="flex justify-center">
-      <section className="text-center px-1.5 mb-6 mt-2  w-3/4 rounded-2xl hover:shadow-orange-300 hover:shadow-2xl hover:duration-700 border-zinc-950 border-8 bg-slate-100 font-razha">
+      <section className="text-center px-1.5 mb-6 mt-2  w-3/4 rounded-2xl hover:shadow-orange-300 hover:shadow-2xl hover:duration-700 border-zinc-950 border-8 bg-slate-100 font-caprasimo">
         <dl>
           <dt className="text-orange-700 text-4xl lg:text-4xl m-6 ">
             {foodName} <span>{foodPrice} €</span>
