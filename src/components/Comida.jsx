@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Comida({
   source,
@@ -20,21 +21,43 @@ function Comida({
   azufre = false,
   altramuces = false,
   moluscos = false,
+  right = false,
+  animacion = false
 }) {
+  const initialX = animacion ? (right ? 200 : -200) : 0;
+  // Cuidado con los valores que se definen, en tamaño grande el whileInView no pasaría nada, porque se encuentra dentro, pero en tamaños más pequeños, cuando el scroll baja, no consigue ver la comida.
+  // console.log(initialX)
+  // Si el animacion es falso, que la posición inicial se quede en el 0
+  // Si el animacion es verdadero, hay que mirar la otra varible de right
+  // Si right es verdadero, que entre por la derecha (posición 1000)
+  // Si right es falso, que entre por la izquierda (posición -1000)
+
   return (
     <div className="flex justify-center">
-      <section className="text-center px-1.5 mb-6 mt-2  w-3/4 rounded-2xl hover:shadow-orange-300 hover:shadow-2xl hover:duration-700 border-zinc-950 border-8 bg-slate-100 font-caprasimo">
+      <motion.section
+        className="text-center px-1.5 mb-6 mt-2  w-3/4 rounded-2xl  border-zinc-950 border-8 bg-slate-100 font-caprasimo hover:shadow-orange-300 hover:shadow-2xl hover:duration-500"
+        initial={{ x: initialX}}
+        whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
+        transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0}} 
+        viewport={{ once: true }}//Para que se muestre solo una vez
+      >
         <dl>
           <dt className="text-orange-700 text-4xl lg:text-4xl m-6 ">
             {foodName} <span>{foodPrice} €</span>
           </dt>
-          <dd className={ramen ? "text-orange-700 text-4xl lg:text-4xl m-6 text-left bg-gray-400 rounded-md p-2":"hidden"}>Información Ramen</dd>
+          <dd
+            className={
+              ramen
+                ? "text-orange-700 text-4xl lg:text-4xl m-6 text-left bg-gray-400 rounded-md p-2"
+                : "hidden"
+            }
+          >
+            Información Ramen
+          </dd>
         </dl>
 
-        
-
         <div className="flex justify-center">
-          <img src={source} alt={foodName} width="50%" className="w-full"></img>
+          <motion.img src={source} alt={foodName} width="50%"></motion.img>
         </div>
 
         <p className="text-orange-700 text-2xl lg:text-4xl text-left mx-8">
@@ -160,8 +183,7 @@ function Comida({
             ></img>
           </div>
         </div>
-
-      </section>
+      </motion.section>
     </div>
   );
 }
