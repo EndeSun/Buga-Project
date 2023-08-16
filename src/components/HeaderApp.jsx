@@ -53,6 +53,12 @@ function HeaderApp() {
             Combos
           </Link>
           <Link
+            to="/BebidaPostre"
+            className="navBar2 p-1 no-underline  rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-xl lg:text-3xl md:border-none lg:m-4 md:shadow-md md:shadow-orange-300"
+          >
+            Bebida y Postres
+          </Link>
+          <Link
             to="/"
             className="navBar2 p-1 no-underline rounded-lg bg-transparent text-neutral-200 text-xl font-razha uppercase font-bold hover:duration-500 hover:text-amber-200 my-2 md:text-4xl md:borderc-none md:hidden md:shadow-md md:shadow-orange-300"
           >

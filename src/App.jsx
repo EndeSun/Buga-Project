@@ -12,9 +12,8 @@ import { Table } from "react-bootstrap";
 import HeaderApp from "./components/HeaderApp";
 import FooterApp from "./components/FooterApp";
 import Home from "./pages/Home";
-import Bebida from "./pages/Carta/Bebida";
+import BebidaPostre from "./pages/Carta/BebidaPostre";
 import Ramen from "./pages/Carta/Ramen";
-import Postre from "./pages/Carta/Postre";
 import Entrantes from "./pages/Carta/Entrantes";
 import Don from "./pages/Carta/Don";
 import Combos from "./pages/Carta/Combos";
@@ -35,12 +34,11 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Bebida" element={<Bebida />} />
+          <Route path="/BebidaPostre" element={<BebidaPostre />} />
           <Route path="/Carta" element={<Carta />} />
           <Route path="/Combos" element={<Combos />} />
           <Route path="/Don" element={<Don />} />
           <Route path="/Entrantes" element={<Entrantes />} />
-          <Route path="/Postre" element={<Postre />} />
           <Route path="/Ramen" element={<Ramen />} />
           <Route path="/AvisoLegal" element={<AvisoLegal />} />
           <Route path="/Cookies" element={<Cookies />} />
