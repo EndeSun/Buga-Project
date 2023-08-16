@@ -81,14 +81,42 @@ function Ramen() {
         crustaceos={true}
         moluscos={true}
         pescado={true}
+        right={true}
+        animacion = {true}
       />
 
       <Comida
+        ramen={true}
         source="../src/assets/Entrantes/Edamame.png"
         foodName="Edamame"
         foodDescription="Algas en salsa Soja"
         foodPrice="10.4"
         soja={true}
+        animacion = {true}
+      />
+
+      <Comida
+        source="../src/assets/Ramen/Chashu Miso Ramen_Chashu Shoyu Ramen_Spicy Chashu Ramen.png"
+        foodName="Chashu Miso Ramen"
+        foodDescription="Ramen shoyu con pollo frito, verduras, bambú,cebollino, naruto y huevo marinado."
+        foodPrice="12.8"
+        ramen={true}
+        gluten={true}
+        crustaceos={true}
+        moluscos={true}
+        pescado={true}
+        right = {true}
+        animacion = {true}
+      />
+
+      <Comida
+        ramen={true}
+        source="../src/assets/Entrantes/Edamame.png"
+        foodName="Edamame"
+        foodDescription="Algas en salsa Soja"
+        foodPrice="10.4"
+        soja={true}
+        animacion = {true}
       />
 
       <hr className="my-8" />
