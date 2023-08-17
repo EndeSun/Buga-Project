@@ -21,7 +21,6 @@ import Carta from "./pages/Carta/Carta";
 import AvisoLegal from "./pages/Documentacion/AvisoLegal";
 import Cookies from "./pages/Documentacion/Cookies";
 import Error from "./pages/Documentacion/Error";
-import FormularioContacto from "./pages/Documentacion/FormularioContacto";
 import SobreNosotros from "./pages/Documentacion/SobreNosotros";
 
 function App() {
@@ -42,8 +41,7 @@ function App() {
           <Route path="/Ramen" element={<Ramen />} />
           <Route path="/AvisoLegal" element={<AvisoLegal />} />
           <Route path="/Cookies" element={<Cookies />} />
-          <Route path="/Error" element={<Error />} />
-          <Route path="/FormularioContacto" element={<FormularioContacto />} />
+          <Route path="*" element={<Error/>} />
           <Route path="/SobreNosotros" element={<SobreNosotros />} />
         </Routes>
       </main>
