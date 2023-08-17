@@ -2,7 +2,7 @@ import React from "react";
 
 function Cookies() {
   return (
-    <section className="mt-1 text-left text-lg p-6 font-caprasimo bg-neutral-900 font-medium text-neutral-400">
+    <section className="mt-1 text-left text-lg p-6 font-caprasimo bg-neutral-200 font-medium text-neutral-900">
       <h1>POLITICA DE COOKIES</h1>
 
       <p>
