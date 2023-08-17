@@ -2,7 +2,7 @@ import React from "react";
 
 function AvisoLegal() {
   return (
-    <section className="mt-1 text-left text-lg p-6 font-caprasimo bg-neutral-900 font-medium text-neutral-400 [&>ol>li>h2]:font-bold [&>ol>li>h2]:m-2 [&>ol>li>p]:p-2 [&>ol>li>ol>li]:p-2 [&>ol>li>ol>li>p]:p-2">
+    <section className="mt-1 text-left text-lg p-6 font-caprasimo bg-neutral-200 font-medium text-neutral-900 [&>ol>li>h2]:font-bold [&>ol>li>h2]:m-2 [&>ol>li>ol>li]:p-2 [&>ol>li>ol>li>p]:p-2">
       <h1 className="text-center font-bold">
         LEY DE LOS SERVICIOS DE LA SOCIEDAD DE LA INFORMACIÓN (LSSI)
       </h1>
