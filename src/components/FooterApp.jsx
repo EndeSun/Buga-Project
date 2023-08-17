@@ -99,7 +99,7 @@ function Footer() {
           <h6 className="mb-4 text-2xl flex justify-center font-semibold uppercase">
             Contacto
           </h6>
-          <p className="mb-4 md:  sm:p-0 pl-2 flex items-center sm:justify-center justify-start">
+          <Link to="https://goo.gl/maps/mwbGS7wdCuYXyFfA9" className="text-white mb-4 md:  sm:p-0 pl-2 border-cyan-50 flex sm:justify-center justify-start no-underline items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -110,7 +110,7 @@ function Footer() {
               <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
             </svg>
             Calle de San Miguel 51, 51000, Zaragoza, Spain
-          </p>
+          </Link>
           <Link
             to="mailto:bugaramenzaragoza1@gmail.com"
             className="text-white mb-4 md:  sm:p-0 pl-2 border-cyan-50 flex sm:justify-center justify-start no-underline items-center"
