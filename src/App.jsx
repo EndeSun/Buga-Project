@@ -22,6 +22,7 @@ import AvisoLegal from "./pages/Documentacion/AvisoLegal";
 import Cookies from "./pages/Documentacion/Cookies";
 import Error from "./pages/Documentacion/Error";
 import SobreNosotros from "./pages/Documentacion/SobreNosotros";
+import Scroll from "./components/Scroll";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="*" element={<Error/>} />
           <Route path="/SobreNosotros" element={<SobreNosotros />} />
         </Routes>
+        <Scroll/>
       </main>
       {/* Footer de la aplicación que no cambiará */}
       <FooterApp />
