@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Comida from "../../components/Comida";
+import Topping from "../../components/Topping";
+import Scroll from "../../components/Scroll";
 
 function Ramen() {
   // const comidas = [
@@ -118,6 +120,8 @@ function Ramen() {
         soja={true}
         animacion = {true}
       />
+
+      <Topping/>
 
       <hr className="my-8" />
     </>
