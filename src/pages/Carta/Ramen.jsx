@@ -75,7 +75,7 @@ function Ramen() {
 
       <Comida
         source="../src/assets/Ramen/Chashu Miso Ramen_Chashu Shoyu Ramen_Spicy Chashu Ramen.png"
-        foodName="Chashu Miso Ramen"
+        foodName="Chashu Miso"
         foodDescription="Ramen shoyu con pollo frito, verduras, bambú,cebollino, naruto y huevo marinado."
         foodPrice="12.8"
         ramen={true}
@@ -85,6 +85,7 @@ function Ramen() {
         pescado={true}
         right={true}
         animacion = {true}
+        cerdo = {true}
       />
 
       <Comida

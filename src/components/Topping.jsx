@@ -16,9 +16,9 @@ function Topping({ name, ...props }) {
       <Button
         variant="warning"
         onClick={handleShow}
-        className="me-2 fixed ml-4 bottom-10"
+        className="me-2 fixed ml-4 bottom-10 uppercase"
       >
-        EXTRA TOPPINGS
+        👉🏻 Extra topping
       </Button>
 
       <Offcanvas

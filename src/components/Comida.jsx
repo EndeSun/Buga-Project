@@ -22,7 +22,9 @@ function Comida({
   altramuces = false,
   moluscos = false,
   right = false,
-  animacion = false
+  animacion = false,
+  cerdo = false,
+  vegan = false,
 }) {
   const initialX = animacion ? (right ? 200 : -200) : 0;
   // Cuidado con los valores que se definen, en tamaño grande el whileInView no pasaría nada, porque se encuentra dentro, pero en tamaños más pequeños, cuando el scroll baja, no consigue ver la comida.
@@ -35,38 +37,41 @@ function Comida({
   return (
     <div className="flex justify-center">
       <motion.section
-        className="text-center px-1.5 mb-6 mt-2  w-3/4 rounded-2xl  border-zinc-950 border-8 bg-slate-100 font-caprasimo hover:shadow-orange-300 hover:shadow-2xl hover:duration-500"
-        initial={{ x: initialX}}
+        className="text-center mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-100 font-caprasimo shadow-orange-300 shadow-2xl"
+        initial={{ x: initialX }}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
-        transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0}} 
-        viewport={{ once: true }}//Para que se muestre solo una vez
+        transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0 }}
+        viewport={{ once: true }} //Para que se muestre solo una vez
       >
-        <dl>
-          <dt className="text-orange-700 text-4xl lg:text-4xl m-6 ">
-            {foodName} <span>{foodPrice} €</span>
-          </dt>
+        <dl className="text-orange-700 text-xl m-2">
+          <dt>{foodName}</dt>
           <dd
             className={
-              ramen
-                ? "text-orange-700 text-4xl lg:text-4xl m-6 text-left bg-gray-400 rounded-md p-2"
-                : "hidden"
+              ramen ? "text-sm m-2 text-left bg-gray-400 rounded-md" : "hidden"
             }
           >
-            Información Ramen
+            Caldo a elegir entre:
+            <ul>
+              <li>Chashu Shoyu</li>
+              <li>Spicy Chashu</li>
+            </ul>
           </dd>
         </dl>
 
-        <div className="flex justify-center">
-          <motion.img src={source} alt={foodName} width="50%"></motion.img>
+        <div className="flex justify-center relative">
+          <motion.img src={source} alt={foodName} width="90%"></motion.img>
+          {cerdo || vegan ? (
+            <img src={cerdo ? "../src/assets/cerdo.png":"../src/assets/vegan.png"} width="15%" className={cerdo ? "absolute right-1/4 bottom-0":"absolute top-1/4 right-1/4"}></img>
+        ): null}
         </div>
 
-        <p className="text-orange-700 text-2xl lg:text-4xl text-left mx-8">
+        {/* <p className="text-orange-700 text-md text-left mx-8">
           {foodDescription}{" "}
-        </p>
+        </p> */}
 
         {/* Div de los alérgenos */}
-        <div>
-          <div className="primera-fila flex flex-row justify-center flex-wrap">
+        <div className="">
+          <div className="primera-fila flex flex-row justify-center">
             <img
               src="../src/assets/alergenos/gluten.svg"
               className={
@@ -124,7 +129,7 @@ function Comida({
               }
             ></img>
           </div>
-          <div className="Segunda-fila flex flex-row justify-center flex-wrap pb-8">
+          <div className="Segunda-fila flex flex-row justify-center pb-2">
             <img
               src="../src/assets/alergenos/frutosCascara.svg"
               className={
@@ -183,6 +188,9 @@ function Comida({
             ></img>
           </div>
         </div>
+
+
+
       </motion.section>
     </div>
   );
