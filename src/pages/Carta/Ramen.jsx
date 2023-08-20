@@ -69,7 +69,7 @@ function Ramen() {
     //   ))}
     // </Carousel>
     <>
-      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 mt-8">
+      <h1 className="text-center font-extrabold font-caprasimo text-3xl text-amber-500 mt-6 drop-shadow-md ">
         Ramen
       </h1>
 
@@ -86,6 +86,8 @@ function Ramen() {
         right={true}
         animacion = {true}
         cerdo = {true}
+        picante = {true}
+        caldos = {["Chashu Shoyu"," Spicy Chashu"]}
       />
 
       <Comida
@@ -96,6 +98,7 @@ function Ramen() {
         foodPrice="10.4"
         soja={true}
         animacion = {true}
+        vegan = {true}
       />
 
       <Comida

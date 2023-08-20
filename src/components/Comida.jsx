@@ -25,6 +25,9 @@ function Comida({
   animacion = false,
   cerdo = false,
   vegan = false,
+  picante = false,
+  caldos = [],
+  hotSale = false,
 }) {
   const initialX = animacion ? (right ? 200 : -200) : 0;
   // Cuidado con los valores que se definen, en tamaño grande el whileInView no pasaría nada, porque se encuentra dentro, pero en tamaños más pequeños, cuando el scroll baja, no consigue ver la comida.
@@ -35,42 +38,62 @@ function Comida({
   // Si right es falso, que entre por la izquierda (posición -1000)
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center relative">
       <motion.section
-        className="text-center mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-100 font-caprasimo shadow-orange-300 shadow-2xl"
+        className="mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-orange-300 shadow-2xl"
         initial={{ x: initialX }}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
         transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0 }}
         viewport={{ once: true }} //Para que se muestre solo una vez
       >
-        <dl className="text-orange-700 text-xl m-2">
-          <dt>{foodName}</dt>
-          <dd
-            className={
-              ramen ? "text-sm m-2 text-left bg-gray-400 rounded-md" : "hidden"
-            }
-          >
-            Caldo a elegir entre:
-            <ul>
-              <li>Chashu Shoyu</li>
-              <li>Spicy Chashu</li>
-            </ul>
-          </dd>
-        </dl>
+        <p className="text-orange-700 text-center text-xl font-bold m-2">
+          {foodName}
+        </p>
 
         <div className="flex justify-center relative">
           <motion.img src={source} alt={foodName} width="90%"></motion.img>
           {cerdo || vegan ? (
-            <img src={cerdo ? "../src/assets/cerdo.png":"../src/assets/vegan.png"} width="15%" className={cerdo ? "absolute right-1/4 bottom-0":"absolute top-1/4 right-1/4"}></img>
-        ): null}
+            <img
+              src={
+                cerdo ? "../src/assets/cerdo.png" : "../src/assets/vegan.png"
+              }
+              width="11.5%"
+              className={
+                cerdo
+                  ? "absolute right-1/4 bottom-0"
+                  : "absolute top-1/4 right-1/4"
+              }
+            ></img>
+          ) : null}
         </div>
 
-        {/* <p className="text-orange-700 text-md text-left mx-8">
-          {foodDescription}{" "}
-        </p> */}
+        {picante && (
+          <p className="text-red-800 text-xs p-1 text-center">
+            Elige el grado de picante: 🌶🌶
+            <span className="opacity-40">🌶</span>
+          </p>
+        )}
+
+        <dl
+          className={
+            ramen
+              ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
+              : "hidden"
+          }
+        >
+          <dt>Otras opciones de caldo:</dt>
+          {caldos.map((caldo, index) => (
+            <dd
+              className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md "
+              key={index}
+            >
+              {caldo}
+            </dd>
+          ))}
+        </dl>
 
         {/* Div de los alérgenos */}
-        <div className="">
+        <div>
           <div className="primera-fila flex flex-row justify-center">
             <img
               src="../src/assets/alergenos/gluten.svg"
@@ -188,10 +211,15 @@ function Comida({
             ></img>
           </div>
         </div>
-
-
-
       </motion.section>
+
+      <figure className="absolute">
+          <img
+            src="../src/assets/recomended.png"
+            alt="recomendado"
+            width="20%"
+          />
+      </figure>
     </div>
   );
 }
