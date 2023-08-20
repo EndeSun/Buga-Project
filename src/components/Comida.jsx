@@ -213,13 +213,15 @@ function Comida({
         </div>
       </motion.section>
 
-      <figure className="absolute">
-          <img
-            src="../src/assets/recomended.png"
-            alt="recomendado"
-            width="20%"
-          />
-      </figure>
+      {hotSale && <motion.figure
+        className="absolute top-0 left-2"
+        initial={{ x: initialX }}
+        whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
+        transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0 }}
+        viewport={{ once: true }} //Para que se muestre solo una vez
+      >
+        <img src="../src/assets/recomended.png" alt="recomendado" width="30%" />
+      </motion.figure>}
     </div>
   );
 }
