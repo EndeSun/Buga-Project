@@ -88,6 +88,7 @@ function Ramen() {
         cerdo = {true}
         picante = {true}
         caldos = {["Chashu Shoyu"," Spicy Chashu"]}
+        hotSale =  {true}
       />
 
       <Comida
