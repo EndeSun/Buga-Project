@@ -12,9 +12,8 @@ import { Table } from "react-bootstrap";
 import HeaderApp from "./components/HeaderApp";
 import FooterApp from "./components/FooterApp";
 import Home from "./pages/Home";
-import Bebida from "./pages/Carta/Bebida";
+import BebidaPostre from "./pages/Carta/BebidaPostre";
 import Ramen from "./pages/Carta/Ramen";
-import Postre from "./pages/Carta/Postre";
 import Entrantes from "./pages/Carta/Entrantes";
 import Don from "./pages/Carta/Don";
 import Combos from "./pages/Carta/Combos";
@@ -22,8 +21,8 @@ import Carta from "./pages/Carta/Carta";
 import AvisoLegal from "./pages/Documentacion/AvisoLegal";
 import Cookies from "./pages/Documentacion/Cookies";
 import Error from "./pages/Documentacion/Error";
-import FormularioContacto from "./pages/Documentacion/FormularioContacto";
 import SobreNosotros from "./pages/Documentacion/SobreNosotros";
+import Scroll from "./components/Scroll";
 
 function App() {
   return (
@@ -35,19 +34,18 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Bebida" element={<Bebida />} />
+          <Route path="/BebidaPostre" element={<BebidaPostre />} />
           <Route path="/Carta" element={<Carta />} />
           <Route path="/Combos" element={<Combos />} />
           <Route path="/Don" element={<Don />} />
           <Route path="/Entrantes" element={<Entrantes />} />
-          <Route path="/Postre" element={<Postre />} />
           <Route path="/Ramen" element={<Ramen />} />
           <Route path="/AvisoLegal" element={<AvisoLegal />} />
           <Route path="/Cookies" element={<Cookies />} />
-          <Route path="/Error" element={<Error />} />
-          <Route path="/FormularioContacto" element={<FormularioContacto />} />
+          <Route path="*" element={<Error/>} />
           <Route path="/SobreNosotros" element={<SobreNosotros />} />
         </Routes>
+        <Scroll/>
       </main>
       {/* Footer de la aplicación que no cambiará */}
       <FooterApp />
