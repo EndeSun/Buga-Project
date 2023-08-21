@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Comida from "../../components/Comida";
+import Topping from "../../components/Topping";
+import Scroll from "../../components/Scroll";
 
 function Ramen() {
   // const comidas = [
@@ -67,9 +69,38 @@ function Ramen() {
     //   ))}
     // </Carousel>
     <>
-      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 mt-8">
+      <h1 className="text-center font-extrabold font-caprasimo text-3xl text-amber-500 mt-6 drop-shadow-md ">
         Ramen
       </h1>
+
+      <Comida
+        source="../src/assets/Ramen/Chashu Miso Ramen_Chashu Shoyu Ramen_Spicy Chashu Ramen.png"
+        foodName="Chashu Miso"
+        foodDescription="Ramen shoyu con pollo frito, verduras, bambú,cebollino, naruto y huevo marinado."
+        foodPrice="12.8"
+        ramen={true}
+        gluten={true}
+        crustaceos={true}
+        moluscos={true}
+        pescado={true}
+        right={true}
+        animacion = {true}
+        cerdo = {true}
+        picante = {true}
+        caldos = {["Chashu Shoyu"," Spicy Chashu"]}
+        hotSale =  {true}
+      />
+
+      <Comida
+        ramen={true}
+        source="../src/assets/Entrantes/Edamame.png"
+        foodName="Edamame"
+        foodDescription="Algas en salsa Soja"
+        foodPrice="10.4"
+        soja={true}
+        animacion = {true}
+        vegan = {true}
+      />
 
       <Comida
         source="../src/assets/Ramen/Chashu Miso Ramen_Chashu Shoyu Ramen_Spicy Chashu Ramen.png"
@@ -81,15 +112,21 @@ function Ramen() {
         crustaceos={true}
         moluscos={true}
         pescado={true}
+        right = {true}
+        animacion = {true}
       />
 
       <Comida
+        ramen={true}
         source="../src/assets/Entrantes/Edamame.png"
         foodName="Edamame"
         foodDescription="Algas en salsa Soja"
         foodPrice="10.4"
         soja={true}
+        animacion = {true}
       />
+
+      <Topping/>
 
       <hr className="my-8" />
     </>

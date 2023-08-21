@@ -1,4 +1,4 @@
-import {React, useRef} from "react";
+import { React, useRef, useState } from "react";
 import Comida from "../../components/Comida";
 import { useScroll, useTransform, motion } from "framer-motion";
 // Este hook useScroll necesita un argumento target:
@@ -10,14 +10,13 @@ function Entrantes() {
   const { scrollYProgress } = useScroll({
     target: targetRef,
     // Se necesita otro segundo argumento, que es la de offset. Acepta dos strings start end significa que el comienzo del target encuentra con el final del contenedor
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
     // Si no hay un contenedor, va a ser la propia ventana.
-
   });
   // La variable scrollYProgress contiene un número entre el valor 0 y el valor 1 que refiere cuánto ha scrolleado el usuario. 0 es el inicio, y 1 es el fin, está dentro de la propiedad current
 
   // Podemos utilizar otro Hook de framer-motion para calcular diferentes estilos basado en este hook
-  
+
   // Cualquier elemento podemos cambiarlo por un elemento motion:
   // <motion.section ref={targetRef} Esta sección es la cosa que se quiere trackear
 
@@ -26,17 +25,16 @@ function Entrantes() {
   // El primer argumento es la cosa que quiere transformar
   // El segundo argumento es un array de valores que quieres recorrer y el tercer argumento es otro array de valores que se quiere recorrer
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   // Para este caso, cuanndo el scrollYProgress es 0, la opacidad es 1, si el scrollYProgress es 0.5 la opacidad es 0.5 y si el scrollYProgress es 1 la opacidad es 0. Todos los valores de en medio se animará automáticamente.
 
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
-
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
 
   return (
     <>
-      <motion.h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 mt-8" style={{opacity}}>
+      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 mt-8">
         Entrantes
-      </motion.h1>
+      </h1>
 
       <Comida
         source="../src/assets/Entrantes/Ebi furai.png"
@@ -56,6 +54,7 @@ function Entrantes() {
         foodPrice="10.4"
         soja={true}
       />
+
       <hr className="my-8" />
     </>
   );
