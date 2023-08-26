@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { React, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Comida({
   source,
@@ -29,7 +29,8 @@ function Comida({
   caldos = [],
   hotSale = false,
 }) {
-  const initialX = animacion ? (right ? 200 : -200) : 0;
+  const initialX = animacion ? (right ? 100 : -100) : 0;
+  const [showDescription, setShowDescription] = useState(false);
   // Cuidado con los valores que se definen, en tamaño grande el whileInView no pasaría nada, porque se encuentra dentro, pero en tamaños más pequeños, cuando el scroll baja, no consigue ver la comida.
   // console.log(initialX)
   // Si el animacion es falso, que la posición inicial se quede en el 0
@@ -38,62 +39,92 @@ function Comida({
   // Si right es falso, que entre por la izquierda (posición -1000)
 
   return (
-    <div className="flex justify-center relative">
+    <motion.div className="flex justify-center relative">
       <motion.section
-        className="mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-orange-300 shadow-2xl"
+        className= {vegan ? "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-green-100 font-caprasimo shadow-orange-300 shadow-2xl relative text-center": "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-orange-300 shadow-2xl relative text-center"}
         initial={{ x: initialX }}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
-        transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0 }}
+        transition={{
+          duration: animacion ? 2 : 0,
+          delay: animacion ? 0.1 : 0,
+          layout: { duration: 3, type: "spring" },
+        }}
         viewport={{ once: true }} //Para que se muestre solo una vez
       >
-        <p className="text-orange-700 text-center text-xl font-bold m-2">
-          {foodName}
-        </p>
-
-        <div className="flex justify-center relative">
-          <motion.img src={source} alt={foodName} width="90%"></motion.img>
-          {cerdo || vegan ? (
-            <img
-              src={
-                cerdo ? "../src/assets/cerdo.png" : "../src/assets/vegan.png"
-              }
-              width="11.5%"
-              className={
-                cerdo
-                  ? "absolute right-1/4 bottom-0"
-                  : "absolute top-1/4 right-1/4"
-              }
-            ></img>
-          ) : null}
-        </div>
-
-        {picante && (
-          <p className="text-red-800 text-xs p-1 text-center">
-            Elige el grado de picante: 🌶🌶
-            <span className="opacity-40">🌶</span>
-          </p>
-        )}
-
-        <dl
-          className={
-            ramen
-              ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
-              : "hidden"
-          }
-        >
-          <dt>Otras opciones de caldo:</dt>
-          {caldos.map((caldo, index) => (
-            <dd
-              className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md "
-              key={index}
-            >
-              {caldo}
-            </dd>
-          ))}
-        </dl>
+        <AnimatePresence>
+          {showDescription ? null : (
+            <>
+              {/* Título de la comida */}
+              <p className="text-orange-700 text-center text-xl font-bold m-2">
+                {foodName}
+              </p>
+              <motion.div
+                className="imagen-ramen flex justify-center relative"
+                layout
+              >
+                {/* Imagen de la comida */}
+                <motion.img
+                  src={source}
+                  alt={foodName}
+                  width="90%"
+                  className="lg:w-2/4"
+                ></motion.img>
+                {/* Etiqueta de cerdo | vegetariano */}
+                {cerdo || vegan ? (
+                  <img
+                    src={
+                      cerdo
+                        ? "../src/assets/cerdo.png"
+                        : "../src/assets/vegan.png"
+                    }
+                    width="13.5%"
+                    className={
+                      cerdo
+                        ? "absolute right-1/4 bottom-0"
+                        : "absolute top-5 right-1/4"
+                    }
+                  ></img>
+                ) : null}
+              </motion.div>
+              <motion.button
+                className="border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 hover:duration-300"
+                onClick={() => {
+                  setShowDescription(!showDescription);
+                }}
+              >
+                👉🏻DESCRIPCIÓN
+              </motion.button>
+              {/* Apartado de picante */}
+              {picante && (
+                <motion.p className="text-red-800 text-xs p-1 text-center">
+                  Elige el grado de picante: 🌶🌶
+                  <span className="opacity-40">🌶</span>
+                </motion.p>
+              )}
+              {/* Apartado de diferentes caldos */}
+              <dl
+                className={
+                  ramen
+                    ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
+                    : "hidden"
+                }
+              >
+                <dt>Otras opciones de caldo:</dt>
+                {caldos.map((caldo, index) => (
+                  <dd
+                    className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md "
+                    key={index}
+                  >
+                    {caldo}
+                  </dd>
+                ))}
+              </dl>
+            </>
+          )}
+        </AnimatePresence>
 
         {/* Div de los alérgenos */}
-        <div>
+        <motion.div className={showDescription ? "opacity-20" : "opacity-100"}>
           <div className="primera-fila flex flex-row justify-center">
             <img
               src="../src/assets/alergenos/gluten.svg"
@@ -210,19 +241,76 @@ function Comida({
               }
             ></img>
           </div>
-        </div>
+        </motion.div>
       </motion.section>
 
-      {hotSale && <motion.figure
-        className="absolute top-0 left-2"
-        initial={{ x: initialX }}
-        whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
-        transition={{ duration: animacion ? 2 : 0, delay: animacion ? 0.1 : 0 }}
-        viewport={{ once: true }} //Para que se muestre solo una vez
-      >
-        <img src="../src/assets/recomended.png" alt="recomendado" width="30%" />
-      </motion.figure>}
-    </div>
+      {/* Descripción apilada */}
+      <AnimatePresence>
+        {showDescription ? (
+          //Cuando el showDescription es true
+          <motion.div
+            className="w-5/6 h-full bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute grid grid-cols-2 items-center"
+            onClick={() => {
+              setShowDescription(false);
+            }}
+            layout
+            animate={{
+              scale: showDescription ? [0.8, 1] : 1,
+              opacity: showDescription ? [0.6, 1] : 1,
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* La imagen en miniatura */}
+            <motion.img className="lg:w-2/4" src={source} alt={foodName} width="100%"></motion.img>
+            {/* El párrafo de la descripción */}
+            <div className="pr-1">
+              <p className="text-left text-xs">{foodDescription}</p>
+              <p className="font-bold text-red-600">{foodPrice} €</p>
+            </div>
+            {/* Botón de salir */}
+            <motion.button className="absolute bottom-2 right-2">
+              <svg
+                className="w-3 h-3 text-gray-800 dark:text-white "
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 16"
+                onClick={() => setShowDescription(!showDescription)}
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
+                />
+              </svg>
+            </motion.button>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+
+      {/* Etiqueta de recomendado */}
+      {hotSale && (
+        <motion.img
+          src="../src/assets/recomended.png"
+          alt="recomendado"
+          width="25%"
+          className={
+            showDescription
+              ? "absolute top-0 left-2 opacity-0"
+              : "absolute top-0 left-2"
+          }
+          initial={{ x: initialX }}
+          whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
+          transition={{
+            duration: animacion ? 2 : 0,
+            delay: animacion ? 0.1 : 0,
+          }}
+          viewport={{ once: true }} //Para que se muestre solo una vez
+        />
+      )}
+    </motion.div>
   );
 }
 
