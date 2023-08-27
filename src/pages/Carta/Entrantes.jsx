@@ -32,7 +32,7 @@ function Entrantes() {
 
   return (
     <>
-      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 mt-8">
+      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 my-6">
         Entrantes
       </h1>
 
