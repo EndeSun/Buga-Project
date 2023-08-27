@@ -47,6 +47,7 @@ function Entrantes() {
         pescado={true}
         animacion={true}
         right={true}
+        picanteEntrante = {true}
       />
 
       <Comida

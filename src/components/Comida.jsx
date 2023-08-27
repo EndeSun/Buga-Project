@@ -36,6 +36,10 @@ function Comida({
   vegan = false,
   // Apartado de picante que se puede elegir en ramen
   picante = false,
+  // Apartado de picante de los entrantes
+  picanteEntrante = false,
+  // Picante leve
+  picanteLeve = false,
   // Diferentes caldos del Ramen
   caldos = [],
   // Etiqueda de recomendación
@@ -43,6 +47,7 @@ function Comida({
   // Excepciones
   gyoza_verdura = false,
   wakame = false,
+  
 }) {
   // posición inicial del section
   const initialX = animacion ? (right ? 100 : -100) : 0;
@@ -73,7 +78,8 @@ function Comida({
           <p className="text-orange-700 text-center text-xl font-bold m-2">
             {foodName}
           </p>
-          <motion.div
+          {/*  Imagen de la comida y la etiqueta de cerdo o vegetariano*/}
+          <motion.figure
             className="imagen-ramen flex justify-center relative"
             layout
           >
@@ -84,6 +90,7 @@ function Comida({
               width="90%"
               className="lg:w-2/4"
             ></motion.img>
+
             {/* Etiqueta de cerdo | vegetariano */}
             {cerdo || vegan ? (
               <img
@@ -102,18 +109,24 @@ function Comida({
                 }
               ></img>
             ) : null}
-          </motion.div>
-          {/* Apartado de picante */}
+          </motion.figure>
+          {/* Apartado de picante del ramen que se puede elegir*/}
           {picante && (
             <motion.p className="text-red-800 text-xs p-1 text-center">
               Elige el grado de picante: 🌶🌶
               <span className="opacity-40">🌶</span>
             </motion.p>
           )}
+          {/* Apartado de picante fijo (3:picante 1:picante leve) */}
+          {picanteEntrante && (
+            <motion.p className="text-red-800 text-xs p-1 m-0 text-center">
+              🌶<span className={picanteLeve ? "hidden":"leve"}>🌶🌶</span>
+            </motion.p>
+          )}
+
           {/* Apartado de diferentes caldos */}
           <dl
             className={
-              // Eliminado una variable de ramen, cogemos directamente de la variable de caldos
               caldos.length != 0
                 ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
                 : "hidden"
@@ -129,6 +142,8 @@ function Comida({
               </dd>
             ))}
           </dl>
+
+          {/* Botón para abrir la descripción */}
           <motion.button
             className="border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 hover:duration-300"
             onClick={() => {
@@ -141,7 +156,8 @@ function Comida({
 
         {/* ALÉRGENOS */}
         <motion.div className={showDescription ? "opacity-20" : "opacity-100"}>
-          <div className="primera-fila flex flex-row justify-center">
+          {/* Primera fila de alérgenos */}
+          <div className="flex flex-row justify-center">
             <img
               src="../src/assets/alergenos/gluten.svg"
               className={
@@ -199,7 +215,8 @@ function Comida({
               }
             ></img>
           </div>
-          <div className="Segunda-fila flex flex-row justify-center pb-2">
+          {/* Segunda fila de alérgenos */}
+          <div className="flex flex-row justify-center pb-2">
             <img
               src="../src/assets/alergenos/frutosCascara.svg"
               className={
@@ -260,10 +277,9 @@ function Comida({
         </motion.div>
       </motion.section>
 
-      {/* Descripción apilada */}
+      {/* DESCRIPCIÓN PLATO */}
       <AnimatePresence>
-        {showDescription ? (
-          //Cuando el showDescription es true
+        {showDescription &&
           <motion.div
             className="w-5/6 h-4/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute grid grid-cols-2 items-center"
             onClick={() => {
@@ -307,8 +323,7 @@ function Comida({
                 />
               </svg>
             </motion.button>
-          </motion.div>
-        ) : null}
+          </motion.div>}
       </AnimatePresence>
 
       {/* Etiqueta de recomendado */}
