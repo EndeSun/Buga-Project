@@ -1,11 +1,111 @@
-import React from 'react'
+import React from "react";
+import Comida from "../../components/Comida";
 
 function Combos() {
   return (
     <>
-    
+      <h1 className="text-center font-extrabold font-caprasimo text-3xl text-amber-600 my-6 drop-shadow-md ">
+        Combo Style
+      </h1>
+
+      <Comida
+        source="../src/assets/Combos/Combo Ebi Furay Curry.png"
+        foodName="Combo Ebi Furai Curry"
+        foodDescription="Arroz con salsa de curry, camarones fritos, ensalada y sopa"
+        foodPrice="13.50"
+        gluten={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Pato Curry.png"
+        foodName="Combo Pato Curry"
+        foodDescription="Arroz con salsa de curry, pato, ensalada y sopa"
+        foodPrice="11.80"
+        gluten={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Teriyaki Chicken Curry.png"
+        foodName="Combo Teriyaki Chicken Curry"
+        foodDescription="Arroz con salsa de curry, pollo Teriyaki, ensalada y sopa"
+        foodPrice="12.80"
+        gluten={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Karaage Curry.png"
+        foodName="Combo Karaage Curry"
+        foodDescription="Arroz con salsa de curry, pollo frito, ensalada y sopa"
+        foodPrice="12.80"
+        gluten={true}
+        animacion={true}
+        hotSale={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Chicken Katsu Curry.png"
+        foodName="Combo Chicken Katsu Curry"
+        foodDescription="Arroz con salsa de curry, pollo frito, ensalada y sopa"
+        foodPrice="13.50"
+        gluten={true}
+        animacion={true}
+        right = {true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Teriyaki.png"
+        foodName="Combo Teriyaki"
+        foodDescription="Pollo Teriyaki con Kimchi, ensalada, arroz y sopa"
+        foodPrice="11.80"
+        gluten={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Pato.png"
+        foodName="Combo Pato"
+        foodDescription="Pato con ensalada, arroz y sopa"
+        foodPrice="10.80"
+        gluten={true}
+        animacion={true}
+        right = {true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/ComboGyoza.png"
+        foodName="Combo Gyoza"
+        foodDescription="Gyoza (10 unidades) con ensalada, arroz y sopa"
+        foodPrice="10.80"
+        gluten={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Chicken Katsu.png"
+        foodName="Combo Chicken Katsu"
+        foodDescription="Pollo frito con Kimchi, ensalada, arroz y sopa"
+        foodPrice="12.80"
+        gluten={true}
+        animacion={true}
+        right={true}
+        hotSale={true}
+      />
+
+      <Comida
+        source="../src/assets/Combos/Combo Korokke.png"
+        foodName="Combo Korokke"
+        foodDescription="Croqueta fritas de calabaza con Kimchi, ensalada, arroz y sopa"
+        foodPrice="10.80"
+        gluten={true}
+        animacion={true}
+      />
     </>
-  )
+  );
 }
 
-export default Combos
+export default Combos;
