@@ -39,7 +39,7 @@ function Entrantes() {
       <Comida
         source="../src/assets/Entrantes/Karaage/Karaage 2.png"
         foodName="Karaage"
-        foodDescription="Pollo frito, vsienen 5 piezas."
+        foodDescription="Pollo frito, con 5 piezas cada ración."
         foodPrice="4.80"
         gluten={true}
         crustaceos={true}
@@ -53,7 +53,7 @@ function Entrantes() {
       <Comida
         source="../src/assets/Entrantes/Karaage/Okonomiyaki karaage 2.png"
         foodName="Okonomiyaki Karaage"
-        foodDescription="Pollo frito con salsa Okonomiyaki, vienen 5 piezas"
+        foodDescription="Pollo frito con salsa Okonomiyaki, con 5 piezas cada ración"
         foodPrice="5.80"
         soja={true}
         animacion={true}
@@ -62,7 +62,7 @@ function Entrantes() {
       <Comida
         source="../src/assets/Entrantes/Karaage/Spicy Karaage 2.png"
         foodName="Spicy Karaage"
-        foodDescription="Pollo frito picante, vienen 5 piezas"
+        foodDescription="Pollo frito picante, con 5 piezas cada ración"
         foodPrice="5.80"
         soja={true}
         animacion={true}
