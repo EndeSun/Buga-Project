@@ -2,10 +2,15 @@ import { React, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Comida({
+  // Fuente
   source,
+  // Nombre
   foodName,
+  // Descripción
   foodDescription,
+  // Precio 
   foodPrice,
+  // ALÉRGENOS -------------------
   gluten = false,
   crustaceos = false,
   huevos = false,
@@ -20,10 +25,16 @@ function Comida({
   azufre = false,
   altramuces = false,
   moluscos = false,
+  // ---------------------------------
+  // Animación activa por la derecha, tiene que tener animacion como true
   right = false,
+  // Animación activa por la izquierda
   animacion = false,
+  // Etiqueta de cerdo
   cerdo = false,
+  // Etiqueta de vegano
   vegan = false,
+  // Apartado de picante que se puede elegir en ramen
   picante = false,
   // Diferentes caldos del Ramen
   caldos = [],
@@ -39,22 +50,26 @@ function Comida({
   const [showDescription, setShowDescription] = useState(false);
 
   return (
+    // DIV PRINCIPAL QUE ENVUELVE A TODOS LOS ELEMENTOS 
+    // SECTION
+    // DESCRIPCIÓN
+    // HOTSALE
     <motion.div className="flex justify-center relative">
+      {/* SECCIÓN PRINCIPAL */}
       <motion.section
         className={
           vegan
             ? "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-emerald-200/80 shadow-2xl relative text-center"
             : "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-amber-100/80 shadow-2xl relative text-center"
         }
-        initial={{ x: initialX }}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
         transition={{
           duration: animacion ? 2 : 0,
           delay: animacion ? 0.1 : 0,
-          layout: { duration: 3, type: "spring" },
         }}
         viewport={{ once: true }} //Para que se muestre solo una vez
       >
+        {/* CONTENIDO DEL PLATO */}
         <AnimatePresence>
           {/* Título de la comida */}
           <p className="text-orange-700 text-center text-xl font-bold m-2">
@@ -126,7 +141,7 @@ function Comida({
           </motion.button>
         </AnimatePresence>
 
-        {/* Div de los alérgenos */}
+        {/* ALÉRGENOS */}
         <motion.div className={showDescription ? "opacity-20" : "opacity-100"}>
           <div className="primera-fila flex flex-row justify-center">
             <img
