@@ -6,7 +6,6 @@ function Comida({
   foodName,
   foodDescription,
   foodPrice,
-  ramen = false,
   gluten = false,
   crustaceos = false,
   huevos = false,
@@ -26,19 +25,18 @@ function Comida({
   cerdo = false,
   vegan = false,
   picante = false,
+  // Diferentes caldos del Ramen
   caldos = [],
+  // Etiqueda de recomendación
   hotSale = false,
+  // Excepciones
   gyoza_verdura = false,
-  wakame = false
+  wakame = false,
 }) {
+  // posición inicial del section
   const initialX = animacion ? (right ? 100 : -100) : 0;
+  // La descripción del plato
   const [showDescription, setShowDescription] = useState(false);
-  // Cuidado con los valores que se definen, en tamaño grande el whileInView no pasaría nada, porque se encuentra dentro, pero en tamaños más pequeños, cuando el scroll baja, no consigue ver la comida.
-  // console.log(initialX)
-  // Si el animacion es falso, que la posición inicial se quede en el 0
-  // Si el animacion es verdadero, hay que mirar la otra varible de right
-  // Si right es verdadero, que entre por la derecha (posición 1000)
-  // Si right es falso, que entre por la izquierda (posición -1000)
 
   return (
     <motion.div className="flex justify-center relative">
@@ -58,79 +56,74 @@ function Comida({
         viewport={{ once: true }} //Para que se muestre solo una vez
       >
         <AnimatePresence>
-          {showDescription ? null : (
-            <>
-              {/* Título de la comida */}
-              <p className="text-orange-700 text-center text-xl font-bold m-2">
-                {foodName}
-              </p>
-              <motion.div
-                className="imagen-ramen flex justify-center relative"
-                layout
-              >
-                {/* Imagen de la comida */}
-                <motion.img
-                  src={source}
-                  alt={foodName}
-                  width="90%"
-                  className="lg:w-2/4"
-                ></motion.img>
-                {/* Etiqueta de cerdo | vegetariano */}
-                {cerdo || vegan ? (
-                  <img
-                    src={
-                      cerdo
-                        ? "../src/assets/cerdo.png"
-                        : "../src/assets/vegan.png"
-                    }
-                    width="13.5%"
-                    className={
-                      cerdo
-                        ? "absolute right-1/4 bottom-0"
-                        : gyoza_verdura
-                        ? "absolute top-5 right-8"
-                        : wakame
-                        ? "absolute top-5 left-1/4 w-1/6"
-                        : "absolute top-5 right-1/4"
-                    }
-                  ></img>
-                ) : null}
-              </motion.div>
-              <motion.button
-                className="border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 hover:duration-300"
-                onClick={() => {
-                  setShowDescription(!showDescription);
-                }}
-              >
-                👉🏻DESCRIPCIÓN
-              </motion.button>
-              {/* Apartado de picante */}
-              {picante && (
-                <motion.p className="text-red-800 text-xs p-1 text-center">
-                  Elige el grado de picante: 🌶🌶
-                  <span className="opacity-40">🌶</span>
-                </motion.p>
-              )}
-              {/* Apartado de diferentes caldos */}
-              <dl
-                className={
-                  ramen
-                    ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
-                    : "hidden"
+          {/* Título de la comida */}
+          <p className="text-orange-700 text-center text-xl font-bold m-2">
+            {foodName}
+          </p>
+          <motion.div
+            className="imagen-ramen flex justify-center relative"
+            layout
+          >
+            {/* Imagen de la comida */}
+            <motion.img
+              src={source}
+              alt={foodName}
+              width="90%"
+              className="lg:w-2/4"
+            ></motion.img>
+            {/* Etiqueta de cerdo | vegetariano */}
+            {cerdo || vegan ? (
+              <img
+                src={
+                  cerdo ? "../src/assets/cerdo.png" : "../src/assets/vegan.png"
                 }
-              >
-                <dt>Otras opciones de caldo:</dt>
-                {caldos.map((caldo, index) => (
-                  <dd
-                    className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md "
-                    key={index}
-                  >
-                    {caldo}
-                  </dd>
-                ))}
-              </dl>
-            </>
+                width="13.5%"
+                className={
+                  cerdo
+                    ? "absolute right-1/4 bottom-0"
+                    : gyoza_verdura
+                    ? "absolute top-5 right-8"
+                    : wakame
+                    ? "absolute top-5 left-1/4 w-1/6"
+                    : "absolute top-5 right-1/4"
+                }
+              ></img>
+            ) : null}
+          </motion.div>
+          {/* Apartado de picante */}
+          {picante && (
+            <motion.p className="text-red-800 text-xs p-1 text-center">
+              Elige el grado de picante: 🌶🌶
+              <span className="opacity-40">🌶</span>
+            </motion.p>
           )}
+          {/* Apartado de diferentes caldos */}
+          <dl
+            className={
+              // Eliminado una variable de ramen, cogemos directamente de la variable de caldos
+              caldos.length != 0
+                ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
+                : "hidden"
+            }
+          >
+            <dt>Otras opciones de caldo:</dt>
+            {caldos.map((caldo, index) => (
+              <dd
+                className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md "
+                key={index}
+              >
+                {caldo}
+              </dd>
+            ))}
+          </dl>
+          <motion.button
+            className="border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 hover:duration-300"
+            onClick={() => {
+              setShowDescription(!showDescription);
+            }}
+          >
+            👉🏻DESCRIPCIÓN
+          </motion.button>
         </AnimatePresence>
 
         {/* Div de los alérgenos */}
@@ -259,7 +252,7 @@ function Comida({
         {showDescription ? (
           //Cuando el showDescription es true
           <motion.div
-            className="w-5/6 h-full bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute grid grid-cols-2 items-center"
+            className="w-5/6 h-4/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute grid grid-cols-2 items-center"
             onClick={() => {
               setShowDescription(false);
             }}
