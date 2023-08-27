@@ -28,6 +28,8 @@ function Comida({
   picante = false,
   caldos = [],
   hotSale = false,
+  gyoza_verdura = false,
+  wakame = false
 }) {
   const initialX = animacion ? (right ? 100 : -100) : 0;
   const [showDescription, setShowDescription] = useState(false);
@@ -41,7 +43,11 @@ function Comida({
   return (
     <motion.div className="flex justify-center relative">
       <motion.section
-        className= {vegan ? "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-green-100 font-caprasimo shadow-orange-300 shadow-2xl relative text-center": "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-orange-300 shadow-2xl relative text-center"}
+        className={
+          vegan
+            ? "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-emerald-200/80 shadow-2xl relative text-center"
+            : "mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo shadow-amber-100/80 shadow-2xl relative text-center"
+        }
         initial={{ x: initialX }}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
         transition={{
@@ -81,6 +87,10 @@ function Comida({
                     className={
                       cerdo
                         ? "absolute right-1/4 bottom-0"
+                        : gyoza_verdura
+                        ? "absolute top-5 right-8"
+                        : wakame
+                        ? "absolute top-5 left-1/4 w-1/6"
                         : "absolute top-5 right-1/4"
                     }
                   ></img>
@@ -261,7 +271,12 @@ function Comida({
             transition={{ duration: 0.3 }}
           >
             {/* La imagen en miniatura */}
-            <motion.img className="lg:w-2/4" src={source} alt={foodName} width="100%"></motion.img>
+            <motion.img
+              className="lg:w-2/4"
+              src={source}
+              alt={foodName}
+              width="100%"
+            ></motion.img>
             {/* El párrafo de la descripción */}
             <div className="pr-1">
               <p className="text-left text-xs">{foodDescription}</p>

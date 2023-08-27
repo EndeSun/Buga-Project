@@ -37,22 +37,196 @@ function Entrantes() {
       </h1>
 
       <Comida
-        source="../src/assets/Entrantes/Ebi furai.png"
-        foodName="Ebi Furai"
-        foodDescription="Gambas fritas al estilo japonés"
-        foodPrice="12.8"
+        source="../src/assets/Entrantes/Karaage/Karaage 2.png"
+        foodName="Karaage"
+        foodDescription="Pollo frito, vsienen 5 piezas."
+        foodPrice="4.80"
         gluten={true}
         crustaceos={true}
         moluscos={true}
         pescado={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Karaage/Okonomiyaki karaage 2.png"
+        foodName="Okonomiyaki Karaage"
+        foodDescription="Pollo frito con salsa Okonomiyaki, vienen 5 piezas"
+        foodPrice="5.80"
+        soja={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Karaage/Spicy Karaage 2.png"
+        foodName="Spicy Karaage"
+        foodDescription="Pollo frito picante, vienen 5 piezas"
+        foodPrice="5.80"
+        soja={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Gyoza/Gyoza 2.png"
+        foodName="Gyoza"
+        foodDescription="Gyoza frita, vienen 6 piezas"
+        foodPrice="4.80"
+        soja={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Gyoza/Spicy Gyoza 2.png"
+        foodName="Spicy Gyoza"
+        foodDescription="Gyoza con salsa picante, vienen 6 piezas"
+        foodPrice="5.60"
+        soja={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Gyoza/Okonomiyaki Gyoza 2.png"
+        foodName="Okonomiyaki Gyoza"
+        foodDescription="Gyoza con salsa Okonomiyaki, vienen 6 piezas"
+        foodPrice="5.60"
+        soja={true}
+        animacion={true}
+        hotSale={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Gyoza/Gyoza verdura 2.png"
+        foodName="Gyoza de verduras"
+        foodDescription="Gyoza de verdura, vienen 6 piezas"
+        foodPrice="4.80"
+        soja={true}
+        animacion={true}
+        right={true}
+        vegan={true}
+        gyoza_verdura={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Chicken Salad.png"
+        foodName="Chicken Salad"
+        foodDescription="Ensalada de pollo"
+        foodPrice="7.80"
+        soja={true}
+        animacion={true}
+        hotSale={true}
       />
 
       <Comida
         source="../src/assets/Entrantes/Edamame.png"
         foodName="Edamame"
-        foodDescription="Algas en salsa Soja"
-        foodPrice="10.4"
+        foodDescription="Habas de Soja"
+        foodPrice="3.60"
         soja={true}
+        animacion={true}
+        right={true}
+        vegan={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Shibuya Chicken Wings.png"
+        foodName="Shibuya Chicken Wings"
+        foodDescription="Alitas de pollo Shibuya"
+        foodPrice="4.80"
+        soja={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Kimchi.png"
+        foodName="Kimchi"
+        foodDescription="Col y verdura fermentada"
+        foodPrice="4.20"
+        soja={true}
+        animacion={true}
+        hotSale={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Takoyaki.png"
+        foodName="Takoyaki"
+        foodDescription="Bolas de calamar con mayonesa, vienen 4 unidades"
+        foodPrice="5.60"
+        soja={true}
+        animacion={true}
+        right={true}
+        hotSale={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Spicy Fried Tofu.png"
+        foodName="Spicy Fried Tofu"
+        foodDescription="Tofu frito picante"
+        foodPrice="5.60"
+        soja={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Koroke.png"
+        foodName="Korokke"
+        foodDescription="Croquetas fritas de calabaza"
+        foodPrice="4.60"
+        soja={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Wakame.png"
+        foodName="Wakame"
+        foodDescription="Ensalada de algas"
+        foodPrice="4.20"
+        soja={true}
+        animacion={true}
+        vegan={true}
+        wakame={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Ebi Furai.png"
+        foodName="Ebi Furai"
+        foodDescription="Camarones fritos, vienen 3 unidades"
+        foodPrice="5.50"
+        soja={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Gamba Kushiage.png"
+        foodName="Gamba Kushiage"
+        foodDescription="Brochetas de camarones empanizados"
+        foodPrice="4.60"
+        soja={true}
+        animacion={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Chicken Katsu.png"
+        foodName="Chicken Katsu"
+        foodDescription="Pollo frito"
+        foodPrice="4.80"
+        soja={true}
+        animacion={true}
+        right={true}
+      />
+
+      <Comida
+        source="../src/assets/Entrantes/Teriyaki Chicken.png"
+        foodName="Teriyaki Chicken"
+        foodDescription="Pollo Teriyaki"
+        foodPrice="4.80"
+        soja={true}
+        animacion={true}
       />
 
       <hr className="my-8" />
