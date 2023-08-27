@@ -1,118 +1,106 @@
 import React from "react";
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import Carousel from "react-bootstrap/Carousel";
+import { AnimatePresence, motion } from "framer-motion";
 
-function Topping({ name, ...props }) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+function Topping() {
+  const [showToppings, setShowToppings] = useState(false);
   return (
-    <nav>
-      <Button
-        variant="warning"
-        onClick={handleShow}
-        className="me-2 fixed ml-4 bottom-10 uppercase"
+    <>
+      <motion.button
+        className="fixed bottom-6 left-6 border-2 bg-amber-300 rounded-xl text-lg p-2 border-black font-bold font-caprasimo uppercase hover:scale-105"
+        onClick={() => {
+          setShowToppings(!showToppings);
+        }}
       >
-        👉🏻 Extra topping
-      </Button>
-
-      <Offcanvas
-        scroll="true"
-        placement="bottom"
-        show={show}
-        onHide={handleClose}
-        {...props}
-      >
-        <Offcanvas.Header
-          className="flex bg-black text-white font-bold justify-center"
-          closeButton
-          closeVariant="white"
-        >
-          <p>Añade tu extra topping favorito</p>
-        </Offcanvas.Header>
-
-        <Offcanvas.Body className="bg-black text-white mt-2">
-          <div className="grid grid-cols-9">
-            <div>
-              Huevo cocido marinado 1,50 €
-              <img
-                src="../src/assets/Toppings/huevo cocido marinado.png"
-                width="20"
-                height="auto"
-              ></img>
+      ➕ Agregar Topping
+      </motion.button>
+      
+      <AnimatePresence>
+        {showToppings && (
+          <motion.div
+            className="overflow-x-auto whitespace-nowrap w-full h-54 bg-slate-700 text-white fixed bottom-0"
+            animate={{ y: [60, 0] }}
+            exit={{ y: [0, 60], opacity: [1,0]}}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex flex-row [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:my-2 [&>div]:mx-6 [&>div]:p-1 [&>div]:border-1" onClick={()=>{setShowToppings(!showToppings)}}>
+              <div>
+                <p>Huevo cocido marinado 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/huevo cocido marinado.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Huevo Hervido 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/huevo hervido.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Bambú 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/bambu.png"
+                  width="40"
+                ></img>
+              </div>
+              <div>
+                <p>Alga Nori 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/alga nori.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Cebollino 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/cebollino.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Verduras 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/verduras.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Ramen 2,50 €</p>
+                <img
+                  src="../src/assets/Toppings/ramen.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Wantang (5u) 2,50 €</p>
+                <img
+                  src="../src/assets/Toppings/wangtang.png"
+                  width="60"
+                ></img>
+              </div>
+              <div>
+                <p>Naruto 1,50 €</p>
+                <img
+                  src="../src/assets/Toppings/naruto.png"
+                  width="60"
+                ></img>
+              </div>
+              
             </div>
-            <div>
-              Huevo hervido 1,50 €
-              <img
-                src="../src/assets/Toppings/huevo hervido.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Bambú 1,50 €
-              <img
-                src="../src/assets/Toppings/bambu.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Nori 1,50 €
-              <img
-                src="../src/assets/Toppings/alga nori.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Cebollino 1,50 €
-              <img
-                src="../src/assets/Toppings/cebollino.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Verduras 1,50 €
-              <img
-                src="../src/assets/Toppings/verduras.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Ramen 2,50 €
-              <img
-                src="../src/assets/Toppings/ramen.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Wantang 2,50 €
-              <img
-                src="../src/assets/Toppings/wangtang.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-            <div>
-              Naruto 1,50 €
-              <img
-                src="../src/assets/Toppings/naruto.png"
-                width="20"
-                height="auto"
-              ></img>
-            </div>
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
-    </nav>
+            <button
+            className="fixed border-2 p-1 bottom-2 left-2 bg-slate-400 text-red-800 rounded-lg"
+              onClick={() => {
+                setShowToppings(!showToppings);
+              }}
+            >
+              Cerrar
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 
