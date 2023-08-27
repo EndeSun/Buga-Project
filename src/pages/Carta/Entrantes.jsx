@@ -137,7 +137,6 @@ function Entrantes() {
         foodPrice="4.80"
         soja={true}
         animacion={true}
-        right={true}
       />
 
       <Comida
@@ -148,6 +147,7 @@ function Entrantes() {
         soja={true}
         animacion={true}
         hotSale={true}
+        right={true}
       />
 
       <Comida
@@ -157,7 +157,6 @@ function Entrantes() {
         foodPrice="5.60"
         soja={true}
         animacion={true}
-        right={true}
         hotSale={true}
       />
 
@@ -168,6 +167,7 @@ function Entrantes() {
         foodPrice="5.60"
         soja={true}
         animacion={true}
+        right={true}
       />
 
       <Comida
@@ -177,7 +177,6 @@ function Entrantes() {
         foodPrice="4.60"
         soja={true}
         animacion={true}
-        right={true}
       />
 
       <Comida
@@ -189,6 +188,7 @@ function Entrantes() {
         animacion={true}
         vegan={true}
         wakame={true}
+        right={true}
       />
 
       <Comida
@@ -198,7 +198,6 @@ function Entrantes() {
         foodPrice="5.50"
         soja={true}
         animacion={true}
-        right={true}
       />
 
       <Comida
@@ -208,6 +207,7 @@ function Entrantes() {
         foodPrice="4.60"
         soja={true}
         animacion={true}
+        right={true}
       />
 
       <Comida
@@ -217,7 +217,6 @@ function Entrantes() {
         foodPrice="4.80"
         soja={true}
         animacion={true}
-        right={true}
       />
 
       <Comida
@@ -227,6 +226,7 @@ function Entrantes() {
         foodPrice="4.80"
         soja={true}
         animacion={true}
+        right={true}
       />
 
       <hr className="my-8" />
