@@ -111,14 +111,14 @@ function Comida({
           </motion.figure>
           {/* Apartado de picante del ramen que se puede elegir*/}
           {picante && (
-            <motion.p className="text-red-800 text-xs p-1 text-center">
+            <motion.p className={`text-red-800 text-xs p-1 text-center ${showDescription ? "opacity-20":"opacity-100"}`}>
               Elige el grado de picante: 🌶🌶
               <span className="opacity-40">🌶</span>
             </motion.p>
           )}
           {/* Apartado de picante fijo (3:picante 1:picante leve) */}
           {picanteEntrante && (
-            <motion.p className="text-red-800 text-xs p-1 m-0 text-center">
+            <motion.p className={`text-red-800 text-xs p-1 m-0 text-center ${showDescription ? "opacity-20": "opacity-100"}`}>
               🌶<span className={picanteLeve ? "hidden":"leve"}>🌶🌶</span>
             </motion.p>
           )}
@@ -127,7 +127,7 @@ function Comida({
           <dl
             className={
               caldos.length != 0
-                ? "text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none"
+                ? (`text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none ${showDescription ? "opacity-20" : "opacity-100"}`)
                 : "hidden"
             }
           >
@@ -144,7 +144,7 @@ function Comida({
 
           {/* Botón para abrir la descripción */}
           <motion.button
-            className="border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 hover:duration-300"
+            className={`border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 mb-3 hover:duration-300 ${showDescription ? "opacity-20": "opacity-100"}`}
             onClick={() => {
               setShowDescription(!showDescription);
             }}
@@ -153,7 +153,9 @@ function Comida({
           </motion.button>
 
         {/* ALÉRGENOS */}
-        <motion.div className={showDescription ? "opacity-20" : "opacity-100"}>
+        <motion.div className={showDescription ? "opacity-20":"opacity-100 mb-2.5"}>
+          {/* ------------------------Corregir-------------------------- */}
+          
           {/* Primera fila de alérgenos */}
           <div className="flex flex-row justify-center">
             <img
@@ -279,7 +281,7 @@ function Comida({
       <AnimatePresence>
         {showDescription &&
           <motion.div
-            className="w-5/6 h-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-3.5 grid grid-cols-2 items-center"
+            className="w-5/6 h-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-12 grid grid-cols-2 items-center"
             animate={{
               scale: showDescription ? [0.8, 1] : 1,
               opacity: showDescription ? [0.6, 1] : 1,
@@ -301,9 +303,9 @@ function Comida({
             ></motion.img>
 
             {/* Descripción */}
-            <div className="pr-2">
-              <p className="text-left text-xs">{foodDescription}</p>
-              <p className="font-bold text-red-600">{foodPrice} €</p>
+            <div className="pr-2 mr-1 relative font-caprasimo">
+              <p className="text-left text-xs rounded-sm shadow-xl shadow-yellow-400/20 p-3 ">{foodDescription}</p>
+              <p className="font-bold text-sm text-yellow-400  border-1 border-yellow-400 rounded-md px-1 bg-slate-950 absolute right-0 -bottom-4">{foodPrice} €</p>
             </div>
             {/* SVG de salida (en posición absoluta)*/}
             <motion.button className="absolute bottom-2 right-2">
@@ -335,17 +337,14 @@ function Comida({
           alt="recomendado"
           width="25%"
           className={
-            showDescription
-              ? "absolute top-0 left-2 opacity-0"
-              : "absolute top-0 left-2"
+              `absolute top-0 left-2  ${showDescription && "opacity-0"}`
           }
-          initial={{ x: initialX }}
           whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
           transition={{
             duration: animacion ? 2 : 0,
             delay: animacion ? 0.1 : 0,
           }}
-          viewport={{ once: true }} //Para que se muestre solo una vez
+          viewport={{ once: true }}
         />
       )}
     </motion.div>
