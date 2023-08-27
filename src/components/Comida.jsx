@@ -73,7 +73,6 @@ function Comida({
         viewport={{ once: true }} //Para que se muestre solo una vez
       >
         {/* CONTENIDO DEL PLATO */}
-        <AnimatePresence>
           {/* Título de la comida */}
           <p className="text-orange-700 text-center text-xl font-bold m-2">
             {foodName}
@@ -152,7 +151,6 @@ function Comida({
           >
             👉🏻DESCRIPCIÓN
           </motion.button>
-        </AnimatePresence>
 
         {/* ALÉRGENOS */}
         <motion.div className={showDescription ? "opacity-20" : "opacity-100"}>
@@ -281,30 +279,33 @@ function Comida({
       <AnimatePresence>
         {showDescription &&
           <motion.div
-            className="w-5/6 h-4/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute grid grid-cols-2 items-center"
-            onClick={() => {
-              setShowDescription(false);
-            }}
-            layout
+            className="w-5/6 h-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-3.5 grid grid-cols-2 items-center"
             animate={{
               scale: showDescription ? [0.8, 1] : 1,
               opacity: showDescription ? [0.6, 1] : 1,
             }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: [1,0], scale: [1, 0.6] }}
+            transition={{ duration: 0.2 }}
+            layout
+            onClick={() => {
+              setShowDescription(false);
+            }}
           >
-            {/* La imagen en miniatura */}
+
+            {/* Imagen en miniatura */}
             <motion.img
               className="lg:w-2/4"
               src={source}
               alt={foodName}
               width="100%"
             ></motion.img>
-            {/* El párrafo de la descripción */}
-            <div className="pr-1">
+
+            {/* Descripción */}
+            <div className="pr-2">
               <p className="text-left text-xs">{foodDescription}</p>
               <p className="font-bold text-red-600">{foodPrice} €</p>
             </div>
-            {/* Botón de salir */}
+            {/* SVG de salida (en posición absoluta)*/}
             <motion.button className="absolute bottom-2 right-2">
               <svg
                 className="w-3 h-3 text-gray-800 dark:text-white "
@@ -323,6 +324,7 @@ function Comida({
                 />
               </svg>
             </motion.button>
+
           </motion.div>}
       </AnimatePresence>
 
