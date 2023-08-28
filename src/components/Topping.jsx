@@ -14,7 +14,7 @@ function Topping() {
       >
         ➕ Agregar Topping
       </button>
-
+      
       <AnimatePresence>
         {showToppings && (
           <motion.div
