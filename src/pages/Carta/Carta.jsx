@@ -21,7 +21,7 @@ function Carta() {
         >
           <motion.img
             src="../../src/assets/Entrantes/Chicken Katsu.png"
-            className='w-full'
+            className='w-50'
             alt='Chicken Katsu'
             whileHover={{ scale: 1.3 }}
           />
@@ -46,7 +46,7 @@ function Carta() {
         >
           <motion.img
             src="../../src/assets/Ramen/MalaChickenRamen.png"
-            className='w-full'
+            className='w-50'
             alt='Chicken Katsu'
             whileHover={{ scale: 1.3 }}
           />
@@ -71,7 +71,7 @@ function Carta() {
         >
           <motion.img
             src="../../src/assets/Combos/ComboGyoza.png"
-            className='w-full'
+            className='w-50'
             alt='Chicken Katsu'
             whileHover={{ scale: 1.3 }}
           />
@@ -96,7 +96,7 @@ function Carta() {
         >
           <motion.img
             src="../../src/assets/Don/Chicken Don.png"
-            className='w-full'
+            className='w-50'
             alt='Chicken Katsu'
             whileHover={{ scale: 1.3 }}
           />
@@ -121,7 +121,7 @@ function Carta() {
         >
           <motion.img
             src="../../src/assets/Ramen/MalaChickenRamen.png"
-            className='w-full'
+            className='w-50'
             alt='Chicken Katsu'
             whileHover={{ scale: 1.3 }}
           />
@@ -139,6 +139,8 @@ function Carta() {
             </Link>
           </motion.div>
         </motion.section>
+
+        <motion.a href="../src/assets/Carta Buga Zaragoza.pdf" download="Carta Buga Ramen Zaragoza" className='no-underline  text-right m-6 p-2 text-2xl text-amber-600 font-bold hover:animate-bounce italic'>Descargar carta en PDF</motion.a>
       </div>
     </>
   )

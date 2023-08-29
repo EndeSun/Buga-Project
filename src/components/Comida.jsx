@@ -74,7 +74,7 @@ function Comida({
       >
         {/* CONTENIDO DEL PLATO */}
           {/* Título de la comida */}
-          <p className="text-orange-500/80 text-center text-xl font-bold m-2 drop-shadow-2xl">
+          <p className="text-amber-600 text-center text-xl font-bold m-2 drop-shadow-2xl">
             {foodName}
           </p>
           {/*  Imagen de la comida y la etiqueta de cerdo o vegetariano*/}
@@ -335,9 +335,9 @@ function Comida({
         <motion.img
           src="../src/assets/recomended.png"
           alt="recomendado"
-          width="25%"
+          width="18%"
           className={
-              `absolute top-0 left-2  ${showDescription && "opacity-0"}`
+              `absolute top-0 left-6  ${showDescription && "opacity-0"}`
           }
           whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
           transition={{
