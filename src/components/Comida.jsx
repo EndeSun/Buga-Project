@@ -74,7 +74,7 @@ function Comida({
       >
         {/* CONTENIDO DEL PLATO */}
           {/* Título de la comida */}
-          <p className="text-orange-700 text-center text-xl font-bold m-2">
+          <p className="text-orange-500/80 text-center text-xl font-bold m-2 drop-shadow-2xl">
             {foodName}
           </p>
           {/*  Imagen de la comida y la etiqueta de cerdo o vegetariano*/}
