@@ -29,7 +29,7 @@ function App() {
     <>
       {/* Header de la aplicación que no cambiará */}
 
-      <HeaderApp />
+      <HeaderApp/>
       {/* Todas las rutas de la aplicación */}
       <main>
         <Routes>
