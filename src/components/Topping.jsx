@@ -31,8 +31,8 @@ function Topping() {
             >
               <div>
                 <p>
-                  Huevo cocido marinado{" "}
-                  <span className="text-red-500 font-bold">1,50 €</span>
+                  Huevo cocido marinado
+                  <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img
                   src="../src/assets/Toppings/huevo cocido marinado.png"
@@ -41,8 +41,8 @@ function Topping() {
               </div>
               <div>
                 <p>
-                  Huevo Hervido{" "}
-                  <span className="text-red-500 font-bold">1,50 €</span>
+                  Huevo Hervido
+                  <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img
                   src="../src/assets/Toppings/huevo hervido.png"
@@ -51,14 +51,14 @@ function Topping() {
               </div>
               <div>
                 <p>
-                  Bambú <span className="text-red-500 font-bold">1,50 €</span>
+                  Bambú <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img src="../src/assets/Toppings/bambu.png" width="40"></img>
               </div>
               <div>
                 <p>
-                  Alga Nori{" "}
-                  <span className="text-red-500 font-bold">1,50 €</span>
+                  Alga Nori
+                  <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img
                   src="../src/assets/Toppings/alga nori.png"
@@ -67,8 +67,8 @@ function Topping() {
               </div>
               <div>
                 <p>
-                  Cebollino{" "}
-                  <span className="text-red-500 font-bold">1,50 €</span>
+                  Cebollino
+                  <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img
                   src="../src/assets/Toppings/cebollino.png"
@@ -77,27 +77,27 @@ function Topping() {
               </div>
               <div>
                 <p>
-                  Verduras{" "}
-                  <span className="text-red-500 font-bold">1,50 €</span>
+                  Verduras
+                  <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img src="../src/assets/Toppings/verduras.png" width="90"></img>
               </div>
               <div>
                 <p>
-                  Ramen <span className="text-red-500 font-bold">2,50 €</span>
+                  Ramen <span className="text-red-500 font-bold m-2">2,50 €</span>
                 </p>
                 <img src="../src/assets/Toppings/ramen.png" width="90"></img>
               </div>
               <div>
                 <p>
                   Wantang (5u)
-                  <span className="text-red-500 font-bold">2,50 €</span>
+                  <span className="text-red-500 font-bold m-2">2,50 €</span>
                 </p>
                 <img src="../src/assets/Toppings/wangtang.png" width="90"></img>
               </div>
               <div>
                 <p>
-                  Naruto <span className="text-red-500 font-bold">1,50 €</span>
+                  Naruto <span className="text-red-500 font-bold m-2">1,50 €</span>
                 </p>
                 <img src="../src/assets/Toppings/naruto.png" width="90"></img>
               </div>
