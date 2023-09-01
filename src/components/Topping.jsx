@@ -24,7 +24,7 @@ function Topping() {
             transition={{ duration: 0.3 }}
           >
             <div
-              className="flex flex-row [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:my-2 [&>div]:mx-6 [&>div]:p-1 [&>div]:border-1 lg:grid lg:grid-cols-9 lg:[&>div>p]:text-xl lg-gap-1"
+              className="flex flex-row [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:my-2 [&>div]:mx-6 [&>div]:p-1 [&>div]:border-1 lg:[&>div>p]:text-xl"
               onClick={() => {
                 setShowToppings(!showToppings);
               }}
