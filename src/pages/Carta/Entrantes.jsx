@@ -47,7 +47,6 @@ function Entrantes() {
         pescado={true}
         animacion={true}
         right={true}
-        picanteEntrante = {true}
       />
 
       <Comida
@@ -67,6 +66,7 @@ function Entrantes() {
         soja={true}
         animacion={true}
         right={true}
+        picanteEntrante = {true}
       />
 
       <Comida
@@ -86,6 +86,7 @@ function Entrantes() {
         soja={true}
         animacion={true}
         right={true}
+        picanteEntrante = {true}
       />
 
       <Comida

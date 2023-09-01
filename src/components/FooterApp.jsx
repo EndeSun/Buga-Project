@@ -10,7 +10,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-neutral-950 text-center text-neutral-200 w-screen">
+    <footer className="bg-neutral-950 text-center text-neutral-200 w-screen sm:text-2xl mt-6" >
       {/* Tres divs grandes */}
 
       {/* Primer div  */}
@@ -22,7 +22,7 @@ function Footer() {
           <Link href="/" className="mr-6 text-blue-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-4 w-4 sm:w-8 sm:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -33,7 +33,7 @@ function Footer() {
           <Link href="/" className="mr-6 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-4 w-4 sm:w-8 sm:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -44,7 +44,7 @@ function Footer() {
           <Link href="/" className="mr-6 text-orange-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 sm:w-8 sm:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -59,7 +59,7 @@ function Footer() {
           <Link to="https://www.instagram.com/buga_zaragoza/" className="mr-6 text-purple-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-4 w-4 sm:w-8 sm:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -142,7 +142,7 @@ function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            + 34 666 666 666
+            + 34 876 65 35 36
             </Link>
         </div>
       </section>
@@ -150,14 +150,14 @@ function Footer() {
       <section className="flex justify-center">
         <div className="">
           <Link
-            className="no-underline text-xl text-neutral-200 px-2 md:px-4"
+            className="no-underline text-xl sm:text-2xl text-neutral-200 px-2 md:px-4"
             to="/AvisoLegal"
           >
             Aviso legal
           </Link>
 
           <Link
-            className="no-underline text-xl text-neutral-200 px-2 md:px-4"
+            className="no-underline text-xl sm:text-2xl text-neutral-200 px-2 md:px-4"
             to="/Cookies"
           >
             Cookies

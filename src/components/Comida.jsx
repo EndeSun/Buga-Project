@@ -74,7 +74,7 @@ function Comida({
       >
         {/* CONTENIDO DEL PLATO */}
           {/* Título de la comida */}
-          <p className="text-amber-600 text-center text-xl font-bold m-2 drop-shadow-2xl">
+          <p className="text-amber-600 text-center text-xl font-bold m-2 drop-shadow-2xl sm:text-3xl">
             {foodName}
           </p>
           {/*  Imagen de la comida y la etiqueta de cerdo o vegetariano*/}
@@ -87,7 +87,7 @@ function Comida({
               src={source}
               alt={foodName}
               width="90%"
-              className="lg:w-2/4"
+              className="sm:w-3/4 md:w-2/4"
             ></motion.img>
 
             {/* Etiqueta de cerdo | vegetariano */}
@@ -111,14 +111,14 @@ function Comida({
           </motion.figure>
           {/* Apartado de picante del ramen que se puede elegir*/}
           {picante && (
-            <motion.p className={`text-red-800 text-xs p-1 text-center ${showDescription ? "opacity-20":"opacity-100"}`}>
+            <motion.p className={`text-red-800 text-xs sm:text-xl p-1 text-center ${showDescription ? "opacity-20":"opacity-100"}`}>
               Elige el grado de picante: 🌶🌶
               <span className="opacity-40">🌶</span>
             </motion.p>
           )}
           {/* Apartado de picante fijo (3:picante 1:picante leve) */}
           {picanteEntrante && (
-            <motion.p className={`text-red-800 text-xs p-1 m-0 text-center ${showDescription ? "opacity-20": "opacity-100"}`}>
+            <motion.p className={`text-red-800 text-xs p-1 m-0 text-center sm:text-2xl ${showDescription ? "opacity-20": "opacity-100"}`}>
               🌶<span className={picanteLeve ? "hidden":"leve"}>🌶🌶</span>
             </motion.p>
           )}
@@ -131,10 +131,10 @@ function Comida({
                 : "hidden"
             }
           >
-            <dt>Otras opciones de caldo:</dt>
+            <dt className="sm:text-xl">Otras opciones de caldo:</dt>
             {caldos.map((caldo, index) => (
               <dd
-                className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md "
+                className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md sm:text-xl"
                 key={index}
               >
                 {caldo}
@@ -144,7 +144,7 @@ function Comida({
 
           {/* Botón para abrir la descripción */}
           <motion.button
-            className={`border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 mb-3 hover:duration-300 ${showDescription ? "opacity-20": "opacity-100"}`}
+            className={`border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 mb-3 hover:duration-300 sm:text-2xl ${showDescription ? "opacity-20": "opacity-100"}`}
             onClick={() => {
               setShowDescription(!showDescription);
             }}
@@ -160,118 +160,76 @@ function Comida({
           <div className="flex flex-row justify-center">
             <img
               src="../src/assets/alergenos/gluten.svg"
-              className={
-                gluten
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!gluten && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/crustaceos.svg"
-              className={
-                crustaceos
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!crustaceos && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/huevos.svg"
-              className={
-                huevos
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!huevos && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/pescado.svg"
-              className={
-                pescado
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!pescado && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/cacahuetes.svg"
-              className={
-                cacahuetes
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!cacahuetes && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/soja.svg"
-              className={
-                soja
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!soja && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/lacteos.svg"
-              className={
-                lacteos
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!lacteos && "opacity-20"}
+              `}
             ></img>
           </div>
           {/* Segunda fila de alérgenos */}
           <div className="flex flex-row justify-center pb-2">
             <img
               src="../src/assets/alergenos/frutosCascara.svg"
-              className={
-                frutosCascara
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!frutosCascara && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/apio.svg"
-              className={
-                apio
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!apio && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/mostaza.svg"
-              className={
-                mostaza
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!mostaza && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/sesamo.svg"
-              className={
-                sesamo
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!sesamo && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/azufre.svg"
-              className={
-                azufre
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!azufre && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/altramuces.svg"
-              className={
-                altramuces
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!altramuces && "opacity-20"}
+              `}
             ></img>
             <img
               src="../src/assets/alergenos/moluscos.svg"
-              className={
-                moluscos
-                  ? "alergeno-visible w-1/12 h-1/6"
-                  : "opacity-20 w-1/12 h-1/6"
-              }
+              className={`w-1/12 h-1/6 ${!moluscos && "opacity-20"}
+              `}
             ></img>
           </div>
         </motion.div>
@@ -304,8 +262,8 @@ function Comida({
 
             {/* Descripción */}
             <div className="pr-2 mr-1 relative font-caprasimo">
-              <p className="text-left text-xs rounded-sm shadow-xl shadow-yellow-400/20 p-3 ">{foodDescription}</p>
-              <p className="font-bold text-sm text-yellow-400  border-1 border-yellow-400 rounded-md px-1 bg-slate-950 absolute right-0 -bottom-4">{foodPrice} €</p>
+              <p className="text-left text-xs rounded-sm shadow-xl shadow-yellow-400/20 p-3 sm:text-lg">{foodDescription}</p>
+              <p className="font-bold text-sm text-yellow-400  border-1 border-yellow-400 rounded-md px-1 bg-slate-950 absolute right-0 -bottom-4 sm:text-lg sm:right-8">{foodPrice} €</p>
             </div>
             {/* SVG de salida (en posición absoluta)*/}
             <motion.button className="absolute bottom-2 right-2">

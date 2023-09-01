@@ -28,13 +28,13 @@ function Scroll() {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="fixed bottom-4 right-4 p-2 bg-amber-600 text-white opacity-60 rounded-full shadow-lg hover:duration-300 hover:opacity-100"
+          className="fixed bottom-8 right-8 p-2 bg-amber-600 text-white opacity-60 rounded-full shadow-lg hover:duration-300 hover:opacity-100"
         >
           <svg
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
-            className="h-4 w-4"
+            className="h-4 w-4 sm:w-8 sm:h-8"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
