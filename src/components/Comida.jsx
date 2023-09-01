@@ -62,7 +62,7 @@ function Comida({
     <motion.div className="flex justify-center relative">
       {/* SECCIÓN PRINCIPAL */}
       <motion.section
-        className={`mb-6 mt-2  w-4/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo  shadow-2xl relative text-center ${
+        className={`mb-6 mt-2  w-4/6 lg:w-2/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo  shadow-2xl relative text-center ${
           vegan ? "shadow-emerald-200/80" : "shadow-amber-100/80"
         }`}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
@@ -160,37 +160,37 @@ function Comida({
           <div className="flex flex-row justify-center">
             <img
               src="../src/assets/alergenos/gluten.svg"
-              className={`w-1/12 h-1/6 ${!gluten && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!gluten && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/crustaceos.svg"
-              className={`w-1/12 h-1/6 ${!crustaceos && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!crustaceos && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/huevos.svg"
-              className={`w-1/12 h-1/6 ${!huevos && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!huevos && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/pescado.svg"
-              className={`w-1/12 h-1/6 ${!pescado && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!pescado && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/cacahuetes.svg"
-              className={`w-1/12 h-1/6 ${!cacahuetes && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!cacahuetes && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/soja.svg"
-              className={`w-1/12 h-1/6 ${!soja && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!soja && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/lacteos.svg"
-              className={`w-1/12 h-1/6 ${!lacteos && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!lacteos && "opacity-20"}
               `}
             ></img>
           </div>
@@ -198,37 +198,37 @@ function Comida({
           <div className="flex flex-row justify-center pb-2">
             <img
               src="../src/assets/alergenos/frutosCascara.svg"
-              className={`w-1/12 h-1/6 ${!frutosCascara && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!frutosCascara && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/apio.svg"
-              className={`w-1/12 h-1/6 ${!apio && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!apio && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/mostaza.svg"
-              className={`w-1/12 h-1/6 ${!mostaza && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!mostaza && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/sesamo.svg"
-              className={`w-1/12 h-1/6 ${!sesamo && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!sesamo && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/azufre.svg"
-              className={`w-1/12 h-1/6 ${!azufre && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!azufre && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/altramuces.svg"
-              className={`w-1/12 h-1/6 ${!altramuces && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12 ${!altramuces && "opacity-20"}
               `}
             ></img>
             <img
               src="../src/assets/alergenos/moluscos.svg"
-              className={`w-1/12 h-1/6 ${!moluscos && "opacity-20"}
+              className={`w-1/12 h-1/6 sm:w-12  ${!moluscos && "opacity-20"}
               `}
             ></img>
           </div>
@@ -239,7 +239,7 @@ function Comida({
       <AnimatePresence>
         {showDescription &&
           <motion.div
-            className="w-5/6 h-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-12 grid grid-cols-2 items-center"
+            className="w-5/6 h-3/6 lg:w-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-12 grid grid-cols-2 items-center lg:flex lg:justify-center"
             animate={{
               scale: showDescription ? [0.8, 1] : 1,
               opacity: showDescription ? [0.6, 1] : 1,
@@ -254,7 +254,7 @@ function Comida({
 
             {/* Imagen en miniatura */}
             <motion.img
-              className="lg:w-2/4"
+              className="lg:w-1/4"
               src={source}
               alt={foodName}
               width="100%"
@@ -295,7 +295,7 @@ function Comida({
           alt="recomendado"
           width="18%"
           className={
-              `absolute top-0 left-6  ${showDescription && "opacity-0"}`
+              `absolute top-0 left-6 lg:w-1/12 lg:left-96 ${showDescription && "opacity-0"}`
           }
           whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
           transition={{
