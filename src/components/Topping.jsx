@@ -7,7 +7,7 @@ function Topping() {
   return (
     <>
       <button
-        className="fixed bottom-6 left-6 border-2 bg-amber-300 rounded-xl text-md p-2 border-black font-bold font-caprasimo uppercase"
+        className="fixed bottom-6 left-6 border-2 bg-amber-300 rounded-xl text-md lg:text-3xl p-2 border-black font-bold font-caprasimo uppercase"
         onClick={() => {
           setShowToppings(!showToppings);
         }}
@@ -24,7 +24,7 @@ function Topping() {
             transition={{ duration: 0.3 }}
           >
             <div
-              className="flex flex-row [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:my-2 [&>div]:mx-6 [&>div]:p-1 [&>div]:border-1"
+              className="flex flex-row [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:my-2 [&>div]:mx-6 [&>div]:p-1 [&>div]:border-1 lg:grid lg:grid-cols-9 lg:[&>div>p]:text-xl lg-gap-1"
               onClick={() => {
                 setShowToppings(!showToppings);
               }}
@@ -51,7 +51,7 @@ function Topping() {
               </div>
               <div>
                 <p>
-                  Bambú <span className="text-red-500 font-bold m-2">1,50 €</span>
+                  Bambú <span className="text-red-500 font-bold m-2 ">1,50 €</span>
                 </p>
                 <img src="../src/assets/Toppings/bambu.png" width="40"></img>
               </div>
