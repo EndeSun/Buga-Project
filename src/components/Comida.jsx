@@ -47,7 +47,6 @@ function Comida({
   // Excepciones
   gyoza_verdura = false,
   wakame = false,
-  
 }) {
   // posición inicial del section
   const initialX = animacion ? (right ? 100 : -100) : 0;
@@ -62,7 +61,7 @@ function Comida({
     <motion.div className="flex justify-center relative">
       {/* SECCIÓN PRINCIPAL */}
       <motion.section
-        className={`mb-6 mt-2  w-4/6 lg:w-2/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo  shadow-2xl relative text-center ${
+        className={`mb-6 mt-2  w-4/6 lg:w-2/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo  shadow-2xl relative  text-center ${
           vegan ? "shadow-emerald-200/80" : "shadow-amber-100/80"
         }`}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
@@ -73,89 +72,103 @@ function Comida({
         viewport={{ once: true }} //Para que se muestre solo una vez
       >
         {/* CONTENIDO DEL PLATO */}
-          {/* Título de la comida */}
-          <p className="text-amber-600 text-center text-xl font-bold m-2 drop-shadow-2xl sm:text-3xl">
-            {foodName}
-          </p>
-          {/*  Imagen de la comida y la etiqueta de cerdo o vegetariano*/}
-          <motion.figure
-            className="imagen-ramen flex justify-center relative"
-            layout
-          >
-            {/* Imagen de la comida */}
-            <motion.img
-              src={source}
-              alt={foodName}
-              width="90%"
-              className="sm:w-3/4 md:w-2/4"
-            ></motion.img>
+        {/* Título de la comida */}
+        <p className="text-amber-600 text-center text-xl font-bold m-2 drop-shadow-2xl sm:text-3xl">
+          {foodName}
+        </p>
+        {/*  Imagen de la comida y la etiqueta de cerdo o vegetariano*/}
+        <motion.figure
+          className="imagen-ramen flex justify-center relative"
+          layout
+        >
+          {/* Imagen de la comida */}
+          <motion.img
+            src={source}
+            alt={foodName}
+            width="90%"
+            className="sm:w-3/4 md:w-2/4"
+          ></motion.img>
 
-            {/* Etiqueta de cerdo | vegetariano */}
-            {cerdo || vegan ? (
-              <img
-                src={
-                  cerdo ? "../src/assets/cerdo.png" : "../src/assets/vegan.png"
-                }
-                width="13.5%"
-                className={
-                  cerdo
-                    ? "absolute right-1/4 bottom-0"
-                    : gyoza_verdura
-                    ? "absolute top-5 right-8"
-                    : wakame
-                    ? "absolute top-5 left-1/4 w-1/6"
-                    : "absolute top-5 right-1/4"
-                }
-              ></img>
-            ) : null}
-          </motion.figure>
-          {/* Apartado de picante del ramen que se puede elegir*/}
-          {picante && (
-            <motion.p className={`text-red-800 text-xs sm:text-xl p-1 text-center ${showDescription ? "opacity-20":"opacity-100"}`}>
-              Elige el grado de picante: 🌶🌶
-              <span className="opacity-40">🌶</span>
-            </motion.p>
-          )}
-          {/* Apartado de picante fijo (3:picante 1:picante leve) */}
-          {picanteEntrante && (
-            <motion.p className={`text-red-800 text-xs p-1 m-0 text-center sm:text-2xl ${showDescription ? "opacity-20": "opacity-100"}`}>
-              🌶<span className={picanteLeve ? "hidden":"leve"}>🌶🌶</span>
-            </motion.p>
-          )}
-
-          {/* Apartado de diferentes caldos */}
-          <dl
-            className={
-              caldos.length != 0
-                ? (`text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none ${showDescription ? "opacity-20" : "opacity-100"}`)
-                : "hidden"
-            }
+          {/* Etiqueta de cerdo | vegetariano */}
+          {cerdo || vegan ? (
+            <img
+              src={
+                cerdo ? "../src/assets/cerdo.png" : "../src/assets/vegan.png"
+              }
+              width="13.5%"
+              className={
+                cerdo
+                  ? "absolute right-1/4 bottom-0"
+                  : gyoza_verdura
+                  ? "absolute top-5 right-8"
+                  : wakame
+                  ? "absolute top-5 left-1/4 w-1/6"
+                  : "absolute top-5 right-1/4"
+              }
+            ></img>
+          ) : null}
+        </motion.figure>
+        {/* Apartado de picante del ramen que se puede elegir*/}
+        {picante && (
+          <motion.p
+            className={`text-red-800 text-xs sm:text-xl p-1 text-center ${
+              showDescription ? "opacity-20" : "opacity-100"
+            }`}
           >
-            <dt className="sm:text-xl">Otras opciones de caldo:</dt>
-            {caldos.map((caldo, index) => (
-              <dd
-                className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md sm:text-xl"
-                key={index}
-              >
-                {caldo}
-              </dd>
-            ))}
-          </dl>
-
-          {/* Botón para abrir la descripción */}
-          <motion.button
-            className={`border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 mb-3 hover:duration-300 sm:text-2xl ${showDescription ? "opacity-20": "opacity-100"}`}
-            onClick={() => {
-              setShowDescription(!showDescription);
-            }}
+            Elige el grado de picante: 🌶🌶
+            <span className="opacity-40">🌶</span>
+          </motion.p>
+        )}
+        {/* Apartado de picante fijo (3:picante 1:picante leve) */}
+        {picanteEntrante && (
+          <motion.p
+            className={`text-red-800 text-xs p-1 m-0 text-center sm:text-2xl ${
+              showDescription ? "opacity-20" : "opacity-100"
+            }`}
           >
-            👉🏻DESCRIPCIÓN
-          </motion.button>
+            🌶<span className={picanteLeve ? "hidden" : "leve"}>🌶🌶</span>
+          </motion.p>
+        )}
+
+        {/* Apartado de diferentes caldos */}
+        <dl
+          className={
+            caldos.length != 0
+              ? `text-xs flex flex-col items-center justify-center text-center mx-2 px-8 rounded-md list-none ${
+                  showDescription ? "opacity-20" : "opacity-100"
+                }`
+              : "hidden"
+          }
+        >
+          <dt className="sm:text-xl">Otras opciones de caldo:</dt>
+          {caldos.map((caldo, index) => (
+            <dd
+              className="m-0 font-bold border-1 rounded-full p-1 text-orange-700 bg-slate-50 bg-opacity-60 mt-1 w-3/4 shadow-md sm:text-xl"
+              key={index}
+            >
+              {caldo}
+            </dd>
+          ))}
+        </dl>
+
+        {/* Botón para abrir la descripción */}
+        <motion.button
+          className={`border-2 rounded-lg text-xs font-bold p-1 m-1 border-gray-900 hover:bg-slate-400 mb-3 hover:duration-300 sm:text-2xl ${
+            showDescription ? "opacity-20" : "opacity-100"
+          }`}
+          onClick={() => {
+            setShowDescription(!showDescription);
+          }}
+        >
+          👉🏻DESCRIPCIÓN
+        </motion.button>
 
         {/* ALÉRGENOS */}
-        <motion.div className={showDescription ? "opacity-20":"opacity-100 mb-2.5"}>
+        <motion.div
+          className={showDescription ? "opacity-20" : "opacity-100 mb-2.5"}
+        >
           {/* ------------------------Corregir-------------------------- */}
-          
+
           {/* Primera fila de alérgenos */}
           <div className="flex flex-row justify-center">
             <img
@@ -233,25 +246,47 @@ function Comida({
             ></img>
           </div>
         </motion.div>
+
+        {/* Etiqueta de recomendado */}
+        {hotSale && (
+          <motion.img
+            src="../src/assets/recomended.png"
+            alt="recomendado"
+            width="20%"
+            className={`absolute top-10 left-1/2 md:left-0 md:top-0 ${
+              showDescription && "opacity-0"
+            }`}
+            whileInView={{
+              x: [initialX, 0],
+              opacity: animacion ? [0, 1] : 1,
+            }}
+            transition={{
+              duration: animacion ? 2 : 0,
+              delay: animacion ? 0.1 : 0,
+            }}
+            viewport={{ once: true }}
+          />
+        )}
+
+        
       </motion.section>
 
       {/* DESCRIPCIÓN PLATO */}
       <AnimatePresence>
-        {showDescription &&
+        {showDescription && (
           <motion.div
             className="w-5/6 h-3/6 lg:w-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-12 grid grid-cols-2 items-center lg:flex lg:justify-center"
             animate={{
               scale: showDescription ? [0.8, 1] : 1,
               opacity: showDescription ? [0.6, 1] : 1,
             }}
-            exit={{ opacity: [1,0], scale: [1, 0.6] }}
+            exit={{ opacity: [1, 0], scale: [1, 0.6] }}
             transition={{ duration: 0.2 }}
             layout
             onClick={() => {
               setShowDescription(false);
             }}
           >
-
             {/* Imagen en miniatura */}
             <motion.img
               className="lg:w-1/4"
@@ -262,8 +297,12 @@ function Comida({
 
             {/* Descripción */}
             <div className="pr-2 mr-1 relative font-caprasimo">
-              <p className="text-left text-xs rounded-sm shadow-xl shadow-yellow-400/20 p-3 sm:text-lg">{foodDescription}</p>
-              <p className="font-bold text-sm text-yellow-400  border-1 border-yellow-400 rounded-md px-1 bg-slate-950 absolute right-0 -bottom-4 sm:text-lg sm:right-8">{foodPrice} €</p>
+              <p className="text-left text-xs rounded-sm shadow-xl shadow-yellow-400/20 p-3 sm:text-lg">
+                {foodDescription}
+              </p>
+              <p className="font-bold text-sm text-yellow-400  border-1 border-yellow-400 rounded-md px-1 bg-slate-950 absolute right-0 -bottom-4 sm:text-lg sm:right-8">
+                {foodPrice} €
+              </p>
             </div>
             {/* SVG de salida (en posición absoluta)*/}
             <motion.button className="absolute bottom-2 right-2">
@@ -284,27 +323,9 @@ function Comida({
                 />
               </svg>
             </motion.button>
-
-          </motion.div>}
+          </motion.div>
+        )}
       </AnimatePresence>
-
-      {/* Etiqueta de recomendado */}
-      {hotSale && (
-        <motion.img
-          src="../src/assets/recomended.png"
-          alt="recomendado"
-          width="18%"
-          className={
-              `absolute top-0 left-6 lg:w-1/12 lg:left-96 ${showDescription && "opacity-0"}`
-          }
-          whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
-          transition={{
-            duration: animacion ? 2 : 0,
-            delay: animacion ? 0.1 : 0,
-          }}
-          viewport={{ once: true }}
-        />
-      )}
     </motion.div>
   );
 }

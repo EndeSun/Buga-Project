@@ -56,6 +56,7 @@ function Entrantes() {
         foodPrice="5.80"
         soja={true}
         animacion={true}
+        hotSale = {true}
       />
 
       <Comida
