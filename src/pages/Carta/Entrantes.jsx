@@ -41,12 +41,9 @@ function Entrantes() {
         foodName="Karaage"
         foodDescription="Pollo frito, con 5 piezas cada ración."
         foodPrice="4.80"
-        gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
         animacion={true}
         right={true}
+        gluten = {true}
       />
 
       <Comida
@@ -54,9 +51,10 @@ function Entrantes() {
         foodName="Okonomiyaki Karaage"
         foodDescription="Pollo frito con salsa Okonomiyaki, con 5 piezas cada ración"
         foodPrice="5.80"
-        soja={true}
         animacion={true}
         hotSale = {true}
+        gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -64,10 +62,10 @@ function Entrantes() {
         foodName="Spicy Karaage"
         foodDescription="Pollo frito picante, con 5 piezas cada ración"
         foodPrice="5.80"
-        soja={true}
         animacion={true}
         right={true}
         picanteEntrante = {true}
+        gluten = {true}
       />
 
       <Comida
@@ -75,9 +73,8 @@ function Entrantes() {
         foodName="Gyoza"
         foodDescription="Gyoza frita, vienen 6 piezas"
         foodPrice="4.80"
-        soja={true}
         animacion={true}
-        gyoza = {true}
+        gluten = {true}
       />
 
       <Comida
@@ -85,11 +82,10 @@ function Entrantes() {
         foodName="Spicy Gyoza"
         foodDescription="Gyoza con salsa picante, vienen 6 piezas"
         foodPrice="5.60"
-        soja={true}
         animacion={true}
         right={true}
         picanteEntrante = {true}
-        gyoza = {true}
+        gluten = {true}
       />
 
       <Comida
@@ -97,10 +93,10 @@ function Entrantes() {
         foodName="Okonomiyaki Gyoza"
         foodDescription="Gyoza con salsa Okonomiyaki, vienen 6 piezas"
         foodPrice="5.60"
-        soja={true}
         animacion={true}
         hotSale={true}
-        gyoza = {true}
+        gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -108,12 +104,11 @@ function Entrantes() {
         foodName="Gyoza de verduras"
         foodDescription="Gyoza de verdura, vienen 6 piezas"
         foodPrice="4.80"
-        soja={true}
         animacion={true}
         right={true}
         vegan={true}
         gyoza_verdura={true}
-        gyoza = {true}
+        gluten = {true}
       />
 
       <Comida
@@ -121,9 +116,10 @@ function Entrantes() {
         foodName="Chicken Salad"
         foodDescription="Ensalada de pollo"
         foodPrice="7.80"
-        soja={true}
         animacion={true}
         hotSale={true}
+        gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -131,10 +127,11 @@ function Entrantes() {
         foodName="Edamame"
         foodDescription="Habas de Soja"
         foodPrice="3.60"
-        soja={true}
         animacion={true}
         right={true}
         vegan={true}
+        gluten = {true}
+        soja = {true}
       />
 
       <Comida
@@ -142,8 +139,8 @@ function Entrantes() {
         foodName="Shibuya Chicken Wings"
         foodDescription="Alitas de pollo Shibuya"
         foodPrice="4.80"
-        soja={true}
         animacion={true}
+        gluten = {true}
       />
 
       <Comida
@@ -151,10 +148,10 @@ function Entrantes() {
         foodName="Kimchi"
         foodDescription="Col y verdura fermentada"
         foodPrice="4.20"
-        soja={true}
         animacion={true}
         hotSale={true}
         right={true}
+        gluten = {true}
       />
 
       <Comida
@@ -162,9 +159,10 @@ function Entrantes() {
         foodName="Takoyaki"
         foodDescription="Bolas de calamar con mayonesa, vienen 4 unidades"
         foodPrice="5.60"
-        soja={true}
         animacion={true}
         hotSale={true}
+        gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -172,9 +170,10 @@ function Entrantes() {
         foodName="Spicy Fried Tofu"
         foodDescription="Tofu frito picante"
         foodPrice="5.60"
-        soja={true}
         animacion={true}
         right={true}
+        gluten = {true}
+        soja = {true}
       />
 
       <Comida
@@ -182,8 +181,8 @@ function Entrantes() {
         foodName="Korokke"
         foodDescription="Croquetas fritas de calabaza"
         foodPrice="4.60"
-        soja={true}
         animacion={true}
+        gluten = {true}
       />
 
       <Comida
@@ -191,11 +190,13 @@ function Entrantes() {
         foodName="Wakame"
         foodDescription="Ensalada de algas"
         foodPrice="4.20"
-        soja={true}
         animacion={true}
         vegan={true}
         wakame={true}
         right={true}
+        gluten = {true}
+        soja = {true}
+        sesamo = {true}
       />
 
       <Comida
@@ -203,8 +204,9 @@ function Entrantes() {
         foodName="Ebi Furai"
         foodDescription="Camarones fritos, vienen 3 unidades"
         foodPrice="5.50"
-        soja={true}
         animacion={true}
+        gluten = {true}
+        crustaceos = {true}
       />
 
       <Comida
@@ -212,9 +214,11 @@ function Entrantes() {
         foodName="Gamba Kushiage"
         foodDescription="Brochetas de camarones empanizados"
         foodPrice="4.60"
-        soja={true}
         animacion={true}
         right={true}
+        gluten = {true}
+        crustaceos = {true}
+        sesamo = {true}
       />
 
       <Comida
@@ -222,8 +226,9 @@ function Entrantes() {
         foodName="Chicken Katsu"
         foodDescription="Pollo frito"
         foodPrice="4.80"
-        soja={true}
         animacion={true}
+        gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -231,9 +236,10 @@ function Entrantes() {
         foodName="Teriyaki Chicken"
         foodDescription="Pollo Teriyaki"
         foodPrice="4.80"
-        soja={true}
         animacion={true}
         right={true}
+        gluten = {true}
+        sesamo = {true}
       />
 
       <hr className="my-8" />
