@@ -28,7 +28,7 @@ function Scroll() {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="fixed bottom-8 right-8 p-2 bg-amber-600 text-white opacity-60 rounded-full shadow-lg hover:duration-300 hover:opacity-100"
+          className="fixed bottom-8 right-8 p-2 bg-amber-600 text-white opacity-60 rounded-full shadow-lg hover:duration-300 hover:opacity-100 z-50"
         >
           <svg
             aria-hidden="true"

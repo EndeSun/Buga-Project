@@ -18,7 +18,7 @@ function Topping() {
       <AnimatePresence>
         {showToppings && (
           <motion.div
-            className="overflow-x-auto whitespace-nowrap w-full h-54 bg-slate-700 text-white fixed bottom-0 font-caprasimo"
+            className="overflow-x-auto whitespace-nowrap w-full h-54 bg-slate-700 text-white fixed bottom-0 font-caprasimo z-40"
             animate={{ y: [60, 0] }}
             exit={{ y: [0, 60], opacity: [1, 0] }}
             transition={{ duration: 0.3 }}

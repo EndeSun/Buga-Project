@@ -75,6 +75,7 @@ function Entrantes() {
         foodPrice="4.80"
         animacion={true}
         gluten = {true}
+        soja = {true}
       />
 
       <Comida
@@ -86,6 +87,7 @@ function Entrantes() {
         right={true}
         picanteEntrante = {true}
         gluten = {true}
+        soja = {true}
       />
 
       <Comida
@@ -96,7 +98,7 @@ function Entrantes() {
         animacion={true}
         hotSale={true}
         gluten = {true}
-        huevos = {true}
+        soja = {true}
       />
 
       <Comida
@@ -109,6 +111,7 @@ function Entrantes() {
         vegan={true}
         gyoza_verdura={true}
         gluten = {true}
+        soja = {true}
       />
 
       <Comida
@@ -141,6 +144,7 @@ function Entrantes() {
         foodPrice="4.80"
         animacion={true}
         gluten = {true}
+        sesamo = {true}
       />
 
       <Comida
@@ -163,6 +167,7 @@ function Entrantes() {
         hotSale={true}
         gluten = {true}
         huevos = {true}
+        pescado = {true}
       />
 
       <Comida
