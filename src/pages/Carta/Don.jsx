@@ -14,6 +14,7 @@ function Don() {
         foodDescription="Arroz blanco aromatizada"
         foodPrice="2.60"
         gluten={true}
+        soja={true}
         animacion={true}
         right={true}
       />
@@ -24,6 +25,9 @@ function Don() {
         foodDescription="Pollo frito con arroz"
         foodPrice="9.80"
         gluten={true}
+        soja={true}
+        huevos={true}
+        mayonesa={true}
         animacion={true}
         hotSale={true}
       />
@@ -34,6 +38,10 @@ function Don() {
         foodDescription="Pollo con arroz"
         foodPrice="9.80"
         gluten={true}
+        soja={true}
+        huevos={true}
+        sesamo={true}
+        mayonesa={true}
         animacion={true}
         right={true}
       />
@@ -44,6 +52,10 @@ function Don() {
         foodDescription="Anguila con arroz"
         foodPrice="13.80"
         gluten={true}
+        soja={true}
+        pescado={true}
+        huevos={true}
+        mayonesa={true}
         animacion={true}
       />
 
@@ -53,6 +65,9 @@ function Don() {
         foodDescription="Pato con arroz"
         foodPrice="9.80"
         gluten={true}
+        soja={true}
+        huevos={true}
+        mayonesa={true}
         animacion={true}
         right={true}
       />
@@ -63,6 +78,10 @@ function Don() {
         foodDescription="Gambas con arroz"
         foodPrice="9.80"
         gluten={true}
+        soja={true}
+        huevos={true}
+        crustaceos={true}
+        mayonesa={true}
         animacion={true}
       />
     </>

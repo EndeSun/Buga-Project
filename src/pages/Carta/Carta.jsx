@@ -1,6 +1,5 @@
 // La galería, Como una ruta que contiene el enlace a todas las otras páginas.
 import React from 'react'
-import './Carta.css'
 import { motion } from 'framer-motion';
 import {
   BrowserRouter,
@@ -14,26 +13,26 @@ import {
 function Carta() {
   return (
     <>
-      <div className= 'grid grid-cols-1 text-center sm:grid-cols-6 '>
+      <div className= 'grid grid-cols-1 text-center sm:grid-cols-6 h-96'>
         {/* ENTRANTES */}
         <motion.section
-          className='relative w-full h-full bg-slate-200 sm:col-span-2 sm:order-1 border border-white-500 text-white flex flex-col items-center justify-center cursor-pointer group'
+            className='relative flex flex-col items-center justify-center bg-gray-600 hover:bg-gray-200 text-white h-full cursor-pointer'
         >
           <motion.img
             src="../../src/assets/Entrantes/Chicken Katsu.png"
-            className='w-50'
+            className='w-60 h-70 object-cover'
             alt='Chicken Katsu'
-            whileHover={{ scale: 1.3 }}
+            whileHover={{ scale: 1.2 }}
           />
          <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-blue-500 bg-opacity-70 flex flex-col items-center justify-center opacity-0 invisible"
+          className='absolute bg-slate-300 top-0 left-0 w-full h-full flex flex-col items-center justify-center opacity-0 invisible'
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <Link
             to="/Entrantes"
-            className="bg-transparent text-white py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
+            className="bg-transparent text-black py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
           >
             ENTRANTES
           </Link>
