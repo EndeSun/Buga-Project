@@ -86,7 +86,7 @@ function Comida({
             src={source}
             alt={foodName}
             width="90%"
-            className="sm:w-3/4 md:w-2/4"
+            className="sm:w-3/4 md:w-2/4 z-30"
           ></motion.img>
 
           {/* Etiqueta de cerdo | vegetariano */}
@@ -98,12 +98,12 @@ function Comida({
               width="13.5%"
               className={
                 cerdo
-                  ? "absolute right-1/4 bottom-0"
+                  ? "absolute right-1/4 bottom-0 z-40"
                   : gyoza_verdura
-                  ? "absolute top-5 right-8"
+                  ? "absolute top-5 right-4 z-40"
                   : wakame
-                  ? "absolute top-5 left-1/4 w-1/6"
-                  : "absolute top-5 right-1/4"
+                  ? "absolute top-5 left-1/4 w-1/6 z-40"
+                  : "absolute top-5 right-1/4 z-40"
               }
             ></img>
           ) : null}
@@ -253,7 +253,7 @@ function Comida({
             src="../src/assets/recomended.png"
             alt="recomendado"
             width="20%"
-            className={`absolute top-10 left-1/2 md:left-0 md:top-0 ${
+            className={`absolute top-10 left-1/2 md:left-0 md:top-0 z-40 ${
               showDescription && "opacity-0"
             }`}
             whileInView={{
@@ -268,7 +268,6 @@ function Comida({
           />
         )}
 
-        
       </motion.section>
 
       {/* DESCRIPCIÓN PLATO */}
