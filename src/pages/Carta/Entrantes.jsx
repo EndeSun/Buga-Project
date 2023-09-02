@@ -77,6 +77,7 @@ function Entrantes() {
         foodPrice="4.80"
         soja={true}
         animacion={true}
+        gyoza = {true}
       />
 
       <Comida
@@ -88,6 +89,7 @@ function Entrantes() {
         animacion={true}
         right={true}
         picanteEntrante = {true}
+        gyoza = {true}
       />
 
       <Comida
@@ -98,6 +100,7 @@ function Entrantes() {
         soja={true}
         animacion={true}
         hotSale={true}
+        gyoza = {true}
       />
 
       <Comida
@@ -110,6 +113,7 @@ function Entrantes() {
         right={true}
         vegan={true}
         gyoza_verdura={true}
+        gyoza = {true}
       />
 
       <Comida
