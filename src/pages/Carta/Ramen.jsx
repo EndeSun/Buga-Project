@@ -1,9 +1,7 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Comida from "../../components/Comida";
 import Topping from "../../components/Topping";
-import Scroll from "../../components/Scroll";
 
 function Ramen() {
   return (
@@ -17,9 +15,8 @@ function Ramen() {
         foodDescription="Ramen picante con carne de cerdo, verduras, bambú, cebollino, naruto y huevo marinado."
         foodPrice="13.90"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
         right={true}
         animacion={true}
         cerdo={true}
@@ -33,9 +30,8 @@ function Ramen() {
         foodDescription="Ramen picante con pollo, verdura bambú, cilantro, cebollino, 3 piezas pasta wantang, huevo marinado."
         foodPrice="13.90"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
         animacion={true}
         picante={true}
         hotSale={true}
@@ -48,9 +44,8 @@ function Ramen() {
         foodPrice="12.80"
         caldos={["Karaage Miso"]}
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
         right={true}
         animacion={true}
         picante={true}
@@ -62,9 +57,8 @@ function Ramen() {
         foodDescription="Ramen Shio con pollo, verduras, bambú, cebollino, 3 piezas pasta wantang y huevo marinado."
         foodPrice="13.90"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
         animacion={true}
       />
 
@@ -75,10 +69,10 @@ function Ramen() {
         foodPrice="12.60"
         caldos={["Spicy Teriyaki Chicken"]}
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
+        huevos={true}
+        soja={true}
+        sesamo={true}
         right={true}
-        pescado={true}
         animacion={true}
         picante={true}
       />
@@ -89,9 +83,9 @@ function Ramen() {
         foodDescription="Ramen Shoyu con pollo, verduras, bambú, cebollino, 5 piezas pasta wantang y huevo marinado."
         foodPrice="12.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
+        sesamo={true}
         animacion={true}
         hotSale={true}
       />
@@ -103,10 +97,9 @@ function Ramen() {
         foodPrice="12.80"
         caldos={["Spicy Chicken Katsu"]}
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
+        huevos={true}
+        soja={true}
         right={true}
-        pescado={true}
         animacion={true}
         hotSale={true}
         picante={true}
@@ -119,9 +112,9 @@ function Ramen() {
         foodPrice="12.80"
         caldos={["Spicy Ebi Furai"]}
         gluten={true}
+        soja={true}
         crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        huevos={true}
         animacion={true}
         picante={true}
       />
@@ -133,10 +126,10 @@ function Ramen() {
         foodPrice="13.50"
         caldos={["Ebi Kushi Karaage Miso"]}
         gluten={true}
+        huevos={true}
         crustaceos={true}
-        moluscos={true}
+        soja={true}
         right={true}
-        pescado={true}
         animacion={true}
         picante={true}
       />
@@ -148,9 +141,10 @@ function Ramen() {
         foodPrice="12.80"
         caldos={["Ebi Kushi Shoyu"]}
         gluten={true}
+        soja={true}
+        huevos={true}
+        sesamo={true}
         crustaceos={true}
-        moluscos={true}
-        pescado={true}
         animacion={true}
         picante={true}
       />
@@ -159,11 +153,10 @@ function Ramen() {
         source="../src/assets/Ramen/Chashu Miso_Chashu Shoyu_Spicy Chashu.png"
         foodName="Chashu Miso"
         foodDescription="Ramen shoyu con pollo frito, verduras, bambú,cebollino, naruto y huevo marinado."
-        foodPrice="12.8"
+        foodPrice="12.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
         right={true}
         animacion={true}
         cerdo={true}
@@ -176,11 +169,10 @@ function Ramen() {
         source="../src/assets/Ramen/Pato Shoyu Ramen_Pato Miso Ramen.png"
         foodName="Pato Shoyu"
         foodDescription="Ramen shoyu con pato, verduras, bambú, cebollino, naruto y huevo marinado."
-        foodPrice="12.8"
+        foodPrice="12.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
         animacion={true}
         caldos={["Pato Miso"]}
       />
@@ -191,9 +183,9 @@ function Ramen() {
         foodDescription="Ramen miso con carne de cerdo picado, verduras, bambú, cebollino, cacahuete y huevo hervido."
         foodPrice="11.60"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
+        huevos={true}
+        cacahuetes={true}
         caldos={["Spicy Tantan"]}
         right={true}
         animacion={true}
@@ -207,9 +199,9 @@ function Ramen() {
         foodDescription="Ramen miso con pollo, verduras, bambú, cebollino, cacahuete y huevo hervido."
         foodPrice="12.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        huevos={true}
+        cacahuetes={true}
+        soja={true}
         animacion={true}
         cerdo={true}
       />
@@ -220,9 +212,7 @@ function Ramen() {
         foodDescription="Ramen shoyu con verduras, algas, setas, espárragos, boniato, pimientos, berenjena y 3 piezas tofu."
         foodPrice="12.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
         right={true}
         animacion={true}
         vegan={true}
@@ -236,9 +226,7 @@ function Ramen() {
         foodDescription="Ramen Shoyu con verduras, setas, espárragos, berenjena, pimientos, boniato, alga, bambú y cebollino."
         foodPrice="10.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
         animacion={true}
         vegan={true}
       />
@@ -249,9 +237,7 @@ function Ramen() {
         foodDescription="Ramen miso con verdura, sésamo, alga, boniato, bambú, pimientos, espárragos, cebollino."
         foodPrice="10.80"
         gluten={true}
-        crustaceos={true}
-        moluscos={true}
-        pescado={true}
+        soja={true}
         right={true}
         animacion={true}
         vegan={true}

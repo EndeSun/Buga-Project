@@ -14,6 +14,9 @@ function Combos() {
         foodDescription="Arroz con salsa de curry, camarones fritos, ensalada y sopa"
         foodPrice="13.50"
         gluten={true}
+        mayonesa={true}
+        crustaceos={true}
+        huevos={true}
         animacion={true}
         right={true}
       />
@@ -24,6 +27,7 @@ function Combos() {
         foodDescription="Arroz con salsa de curry, pato, ensalada y sopa"
         foodPrice="11.80"
         gluten={true}
+        mayonesa={true}
         animacion={true}
       />
 
@@ -33,6 +37,8 @@ function Combos() {
         foodDescription="Arroz con salsa de curry, pollo Teriyaki, ensalada y sopa"
         foodPrice="12.80"
         gluten={true}
+        mayonesa={true}
+        sesamo={true}
         animacion={true}
         right={true}
       />
@@ -43,6 +49,8 @@ function Combos() {
         foodDescription="Arroz con salsa de curry, pollo frito, ensalada y sopa"
         foodPrice="12.80"
         gluten={true}
+        mayonesa={true}
+        huevos={true}
         animacion={true}
         hotSale={true}
       />
@@ -53,6 +61,8 @@ function Combos() {
         foodDescription="Arroz con salsa de curry, pollo frito, ensalada y sopa"
         foodPrice="13.50"
         gluten={true}
+        mayonesa={true}
+        huevos={true}
         animacion={true}
         right = {true}
       />
@@ -63,6 +73,8 @@ function Combos() {
         foodDescription="Pollo Teriyaki con Kimchi, ensalada, arroz y sopa"
         foodPrice="11.80"
         gluten={true}
+        mayonesa={true}
+        sesamo={true}
         animacion={true}
       />
 
@@ -72,6 +84,7 @@ function Combos() {
         foodDescription="Pato con ensalada, arroz y sopa"
         foodPrice="10.80"
         gluten={true}
+        mayonesa={true}
         animacion={true}
         right = {true}
       />
@@ -82,6 +95,7 @@ function Combos() {
         foodDescription="Gyoza (10 unidades) con ensalada, arroz y sopa"
         foodPrice="10.80"
         gluten={true}
+        mayonesa={true}
         animacion={true}
       />
 
@@ -91,6 +105,7 @@ function Combos() {
         foodDescription="Pollo frito con Kimchi, ensalada, arroz y sopa"
         foodPrice="12.80"
         gluten={true}
+        mayonesa={true}
         animacion={true}
         right={true}
         hotSale={true}
@@ -102,6 +117,7 @@ function Combos() {
         foodDescription="Croqueta fritas de calabaza con Kimchi, ensalada, arroz y sopa"
         foodPrice="10.80"
         gluten={true}
+        mayonesa={true}
         animacion={true}
       />
     </>
