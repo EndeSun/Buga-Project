@@ -57,6 +57,7 @@ function Don() {
         huevos={true}
         mayonesa={true}
         animacion={true}
+        sesamo= {true}
       />
 
       <Comida
