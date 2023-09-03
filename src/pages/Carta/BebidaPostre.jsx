@@ -4,10 +4,11 @@ import BebidaComponent from '../../components/BebidaComponent'
 function BebidaPostre() {
   return (
     <>
-      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 my-6">
+      <h1 className="text-center font-bold font-caprasimo text-2xl md:text-3xl lg:text-4xl text-amber-500 my-4">
         Bebidas
       </h1>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3">
+
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 mx-12 sm:mx-14 md:mx-16">
         <BebidaComponent
           source="../src/assets/Entrantes/Karaage/Karaage 2.png"
           nombreBebida="Coca-Cola"
@@ -27,7 +28,7 @@ function BebidaPostre() {
         {/* Agrega más instancias de BebidaComponent según sea necesario */}
       </div>
 
-      <h1 className="text-center font-bold font-caprasimo text-4xl text-amber-500 my-6">
+      <h1 className="text-center font-bold font-caprasimo text-2xl text-amber-500 md:text-3xl lg:text-4xl my-4">
         Postres
       </h1>
     </>
