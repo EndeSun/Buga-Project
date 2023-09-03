@@ -55,6 +55,7 @@ function Entrantes() {
         hotSale = {true}
         gluten = {true}
         huevos = {true}
+        soja =  {true}
       />
 
       <Comida
@@ -168,6 +169,7 @@ function Entrantes() {
         gluten = {true}
         huevos = {true}
         pescado = {true}
+        soja = {true}
       />
 
       <Comida
