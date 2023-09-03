@@ -22,6 +22,7 @@ function Ramen() {
         cerdo={true}
         picante={true}
         hotSale={true}
+        crustaceos = {true}
       />
 
       <Comida
@@ -49,6 +50,7 @@ function Ramen() {
         right={true}
         animacion={true}
         picante={true}
+        crustaceos = {true}
       />
 
       <Comida
@@ -103,6 +105,7 @@ function Ramen() {
         animacion={true}
         hotSale={true}
         picante={true}
+        crustaceos = {true}
       />
 
       <Comida
@@ -163,6 +166,7 @@ function Ramen() {
         picante={true}
         caldos={["Chashu Shoyu", " Spicy Chashu"]}
         hotSale={true}
+        crustaceos = {true}
       />
 
       <Comida
@@ -175,6 +179,7 @@ function Ramen() {
         huevos={true}
         animacion={true}
         caldos={["Pato Miso"]}
+        crustaceos = {true}
       />
 
       <Comida
