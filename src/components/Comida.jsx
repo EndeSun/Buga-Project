@@ -98,12 +98,12 @@ function Comida({
               width="13.5%"
               className={
                 cerdo
-                  ? "absolute right-1/4 bottom-0 z-40"
+                  ? "absolute right-1/4 bottom-0 z-30"
                   : gyoza_verdura
-                  ? "absolute top-5 right-4 z-40"
+                  ? "absolute top-5 right-4 z-30"
                   : wakame
-                  ? "absolute top-5 left-1/4 w-1/6 z-40"
-                  : "absolute top-5 right-1/4 z-40"
+                  ? "absolute top-5 left-1/4 w-1/6 z-30"
+                  : "absolute top-5 right-1/4 z-30"
               }
             ></img>
           ) : null}
@@ -274,7 +274,7 @@ function Comida({
       <AnimatePresence>
         {showDescription && (
           <motion.div
-            className="w-5/6 h-3/6 lg:w-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-12 grid grid-cols-2 items-center lg:flex lg:justify-center"
+            className="w-5/6 h-3/6 lg:w-3/6 bg-slate-100 rounded-xl border-2 border-black text-black text-center absolute top-12 grid grid-cols-2 items-center lg:flex lg:justify-center z-30"
             animate={{
               scale: showDescription ? [0.8, 1] : 1,
               opacity: showDescription ? [0.6, 1] : 1,
