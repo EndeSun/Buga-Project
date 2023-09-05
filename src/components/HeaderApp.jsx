@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import {React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 ("use cliente");
 // import { Navbar } from "flowbite-react";
 
-function HeaderApp({ children }) {
+function HeaderApp() {
   const [IsOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -15,17 +15,17 @@ function HeaderApp({ children }) {
     window.addEventListener("resize", ocultarMenu);
 
     return () => {
-      window.addEventListener("resize", ocultarMenu);
+      window.removeEventListener("resize", ocultarMenu);
     };
   });
 
   const toggleOpen = () => {
     setIsOpen(!IsOpen);
   };
+  
   return (
     <>
       <nav className="h-28 text-black relative shadow-sm bg-black w-screen">
-        {/* Logo principal del restaurante */}
         <Link
           className="absolute top-2 left-4 no-underline hover:brightness-125 hover:duration-300"
           to="/"
@@ -37,7 +37,6 @@ function HeaderApp({ children }) {
           />
         </Link>
 
-        {/* Enlaces de los elementos internos visibles */}
         <div className="pr-6 hidden [&>a]:m-2 md:flex md:justify-center mt-4">
           <Link
             to="/Entrantes"
@@ -78,7 +77,6 @@ function HeaderApp({ children }) {
           </Link>
         </div>
 
-        {/* SVG del desplegable */}
         <div
           className="absolute md:hidden text-slate-200 hover:text-white hover:duration-200 w-auto right-4 top-10"
           onClick={toggleOpen}

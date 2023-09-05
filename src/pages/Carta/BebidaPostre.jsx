@@ -10,20 +10,20 @@ function BebidaPostre() {
 
       <div className="grid grid-cols-2 gap-2 md:grid-cols-4 mx-12 sm:mx-14 md:mx-16">
         <BebidaComponent
-          source="../src/assets/Bebidas/ambar.webp"
-          nombreBebida="Coca-Cola"
-        />
-        <BebidaComponent
-          source="../src/assets/Entrantes/Karaage/Okonomiyaki karaage 2.png"
-          nombreBebida="Pepsi"
-        />
-        <BebidaComponent
-          source="../src/assets/Entrantes/Gyoza/Gyoza 2.png"
+          source="../src/assets/Bebidas/agua.webp"
           nombreBebida="Agua"
         />
         <BebidaComponent
-          source="../src/assets/Entrantes/Gyoza/Okonomiyaki Gyoza 2.png"
-          nombreBebida="Red Label"
+          source="../src/assets/Bebidas/ambar.webp"
+          nombreBebida="Ambar"
+        />
+        <BebidaComponent
+          source="../src/assets/Bebidas/ambarLimon.webp"
+          nombreBebida="Ambar con Limón"
+        />
+        <BebidaComponent
+          source="../src/assets/Bebidas/aquariusLimon.webp"
+          nombreBebida="Aquarius Limón"
         />
         {/* Agrega más instancias de BebidaComponent según sea necesario */}
       </div>
