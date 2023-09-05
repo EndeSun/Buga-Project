@@ -10,7 +10,7 @@ function BebidaPostre() {
 
       <div className="grid grid-cols-2 gap-2 md:grid-cols-4 mx-12 sm:mx-14 md:mx-16">
         <BebidaComponent
-          source="../src/assets/Entrantes/Karaage/Karaage 2.png"
+          source="../src/assets/Bebidas/ambar.webp"
           nombreBebida="Coca-Cola"
         />
         <BebidaComponent
