@@ -8,7 +8,7 @@ function BebidaPostre() {
         Bebidas
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:grid-cols-4 mx-12 sm:mx-14 md:mx-1">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:grid-cols-4 mx-12 sm:mx-14 md:mx-1 lg:px-24">
         <BebidaComponent
           source="../src/assets/Bebidas/vichy.webp"
           nombreBebida="Vichy"
