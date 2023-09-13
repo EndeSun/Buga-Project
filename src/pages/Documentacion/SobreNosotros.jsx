@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 
 function SobreNosotros() {
-  const imagenDeFondo = '../../src/assets/Ramen/MalaChickenRamen.png';
+  const imagenDeFondo = '../../src/assets/sobreNosotros.jpg';
   // Definicion de la Animacion del Titulo
   const titleVariants = {
     hidden: {
