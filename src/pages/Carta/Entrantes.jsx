@@ -44,6 +44,7 @@ function Entrantes() {
         animacion={true}
         right={true}
         gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -67,6 +68,7 @@ function Entrantes() {
         right={true}
         picanteEntrante = {true}
         gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -191,6 +193,7 @@ function Entrantes() {
         foodPrice="4.60"
         animacion={true}
         gluten = {true}
+        huevos = {true}
       />
 
       <Comida
@@ -215,6 +218,7 @@ function Entrantes() {
         animacion={true}
         gluten = {true}
         crustaceos = {true}
+        huevos = {true}
       />
 
       <Comida

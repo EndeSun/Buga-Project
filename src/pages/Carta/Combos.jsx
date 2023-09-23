@@ -20,6 +20,7 @@ function Combos() {
         animacion={true}
         right={true}
         pescado ={true}
+        sesamo = {true}
       />
 
       <Comida
@@ -31,6 +32,8 @@ function Combos() {
         mayonesa={true}
         animacion={true}
         pescado ={true}
+        sesamo = {true}
+        pescados = {true}
       />
 
       <Comida
@@ -57,6 +60,7 @@ function Combos() {
         animacion={true}
         hotSale={true}
         pescado ={true}
+        sesamo = {true}
       />
 
       <Comida
@@ -70,6 +74,7 @@ function Combos() {
         animacion={true}
         right = {true}
         pescado ={true}
+        sesamo = {true}
       />
 
       <Comida
@@ -94,6 +99,7 @@ function Combos() {
         animacion={true}
         right = {true}
         pescado ={true}
+        sesamo = {true}
       />
 
       <Comida
@@ -105,6 +111,8 @@ function Combos() {
         mayonesa={true}
         animacion={true}
         pescado ={true}
+        soja = {true}
+        sesamo = {true}
       />
 
       <Comida
@@ -118,6 +126,8 @@ function Combos() {
         right={true}
         hotSale={true}
         pescado ={true}
+        sesamo = {true}
+        huevos= {true}
       />
 
       <Comida
@@ -129,6 +139,8 @@ function Combos() {
         mayonesa={true}
         animacion={true}
         pescado ={true}
+        huevos = {true}
+        sesamo = {true}
       />
     </>
   );

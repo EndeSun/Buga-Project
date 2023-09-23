@@ -71,6 +71,7 @@ function Don() {
         mayonesa={true}
         animacion={true}
         right={true}
+        pescados = {true}
       />
 
       <Comida
