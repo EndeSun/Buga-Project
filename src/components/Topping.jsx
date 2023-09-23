@@ -7,7 +7,7 @@ function Topping() {
   return (
     <>
       <button
-        className="fixed bottom-6 left-6 border-2 bg-amber-300 rounded-xl text-md lg:text-3xl p-2 border-black font-bold font-caprasimo uppercase"
+        className="fixed bottom-6 left-6 border-2 bg-amber-300 rounded-xl text-md lg:text-3xl p-2 border-black font-bold font-razha uppercase z-40"
         onClick={() => {
           setShowToppings(!showToppings);
         }}
@@ -18,7 +18,7 @@ function Topping() {
       <AnimatePresence>
         {showToppings && (
           <motion.div
-            className="overflow-x-auto whitespace-nowrap w-full h-54 bg-slate-700 text-white fixed bottom-0 font-caprasimo z-40"
+            className="overflow-x-auto whitespace-nowrap w-full h-54 bg-slate-700 text-white fixed bottom-0 font-razha z-50"
             animate={{ y: [60, 0] }}
             exit={{ y: [0, 60], opacity: [1, 0] }}
             transition={{ duration: 0.3 }}

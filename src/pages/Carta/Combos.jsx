@@ -4,7 +4,7 @@ import Comida from "../../components/Comida";
 function Combos() {
   return (
     <>
-      <h1 className="text-center font-extrabold font-caprasimo text-3xl text-amber-600 my-6 drop-shadow-md ">
+      <h1 className="text-center font-extrabold font-razha text-3xl text-amber-600 my-6 drop-shadow-md ">
         Combo Style
       </h1>
 
@@ -19,6 +19,7 @@ function Combos() {
         huevos={true}
         animacion={true}
         right={true}
+        pescado ={true}
       />
 
       <Comida
@@ -29,6 +30,7 @@ function Combos() {
         gluten={true}
         mayonesa={true}
         animacion={true}
+        pescado ={true}
       />
 
       <Comida
@@ -41,6 +43,7 @@ function Combos() {
         sesamo={true}
         animacion={true}
         right={true}
+        pescado ={true}
       />
 
       <Comida
@@ -53,6 +56,7 @@ function Combos() {
         huevos={true}
         animacion={true}
         hotSale={true}
+        pescado ={true}
       />
 
       <Comida
@@ -65,6 +69,7 @@ function Combos() {
         huevos={true}
         animacion={true}
         right = {true}
+        pescado ={true}
       />
 
       <Comida
@@ -76,6 +81,7 @@ function Combos() {
         mayonesa={true}
         sesamo={true}
         animacion={true}
+        pescado ={true}
       />
 
       <Comida
@@ -87,6 +93,7 @@ function Combos() {
         mayonesa={true}
         animacion={true}
         right = {true}
+        pescado ={true}
       />
 
       <Comida
@@ -97,6 +104,7 @@ function Combos() {
         gluten={true}
         mayonesa={true}
         animacion={true}
+        pescado ={true}
       />
 
       <Comida
@@ -109,6 +117,7 @@ function Combos() {
         animacion={true}
         right={true}
         hotSale={true}
+        pescado ={true}
       />
 
       <Comida
@@ -119,6 +128,7 @@ function Combos() {
         gluten={true}
         mayonesa={true}
         animacion={true}
+        pescado ={true}
       />
     </>
   );

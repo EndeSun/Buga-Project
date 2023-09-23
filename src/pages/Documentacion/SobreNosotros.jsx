@@ -23,7 +23,7 @@ function SobreNosotros() {
   };
   return (
     <>
-      <div className='h-full w-full bg-white  font-caprasimo'>
+      <div className='h-full w-full bg-white  font-razha'>
         {/* Seccion del Titulo con la imagen de fondo */}
         <div
             className="bg-slate-400 bg-cover bg-center h-80"
@@ -41,9 +41,10 @@ function SobreNosotros() {
         {/* Seccion de la Descripcion del restaurante */}
         <div className='h-auto mt-3'>
           <h2 className='mb-4 text-2xl font-extrabold text-center text-black dark:text-white md:text-5xl lg:text-6xl'>Buga Ramen</h2>
-          <p className='text-black mr-5 ml-5'>¡Bienvenido a Buga Ramen, donde la auténtica cocina japonesa cobra vida! Nuestros platos se destacan por la perfecta combinación de sabores y texturas, con ingredientes frescos como verduras, especias, pescados, mariscos y carnes de alta calidad que respetan nuestras tradiciones culinarias japonesas.</p>
-          <p className='text-black mr-5 ml-5'>En nuestra variada carta, satisfacemos todos los gustos, desde opciones veganas y vegetarianas hasta las delicias más carnívoras. Además, ofrecemos un emocionante menú diario. Ven y descubre la esencia de la cocina japonesa en Buga Ramen, donde te esperamos para compartir esta experiencia culinaria única contigo.</p>
-          <p className='mt-3 mb-3 font-bold text-center'>Te Esperamos!!!</p>
+
+          <p className='text-black md:text-3xl mr-5 ml-5'>¡Bienvenido a Buga Ramen, donde la auténtica cocina japonesa cobra vida! Nuestros platos se destacan por la perfecta combinación de sabores y texturas, con ingredientes frescos como verduras, especias, pescados, mariscos y carnes de alta calidad que respetan nuestras tradiciones culinarias japonesas.</p>
+          <p className='text-black md:text-3xl mr-5 ml-5'>En nuestra variada carta, satisfacemos todos los gustos, desde opciones veganas y vegetarianas hasta las delicias más carnívoras. Además, ofrecemos un emocionante menú diario. Ven y descubre la esencia de la cocina japonesa en Buga Ramen, donde te esperamos para compartir esta experiencia culinaria única contigo.</p>
+          <p className='mt-3 mb-3 md:text-3xl font-bold text-center'>Te Esperamos!!!</p>
         </div>
         {/* Seccion con el collage de imagenes de comida */}
         <div className='grid grid-cols-2 gap-4 mr-5 ml-5 pt-3'>
@@ -53,6 +54,7 @@ function SobreNosotros() {
           </div>
           <img src='../../src/assets/Entrantes/Gyoza/Spicy Gyoza 2.png' alt='Imagen 3' className='w-full h-full bg-black' />
         </div>
+
         {/* Seccion con el mapa de la ubicacion  */}
         <div className='mb-1  mt-4 w-full p-4 aspect-w-16 aspect-h-9'> 
           <h2 className='text-2xl font-extrabold text-center text-black dark:text-white md:text-5xl lg:text-6xl'>Estamos aquí 📍</h2>

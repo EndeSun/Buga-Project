@@ -1,18 +1,18 @@
 import React from "react";
 import BebidaComponent from "../../components/BebidaComponent";
+import PostreComponent from "../../components/PostreComponent";
 
 function BebidaPostre() {
   return (
     <section className="bg-black">
-      <h1 className="text-center font-bold font-caprasimo text-2xl md:text-3xl lg:text-4xl text-amber-500 mb-8">
+      <h2 className="text-center font-bold font-razha text-2xl md:text-3xl lg:text-4xl text-white mb-8">
         Bebidas
-      </h1>
+      </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:grid-cols-4 mx-12 sm:mx-14 md:mx-1 lg:px-24">
         <BebidaComponent
           source="../src/assets/Bebidas/vichy.webp"
           nombreBebida="Vichy"
-          
         />
         <BebidaComponent
           source="../src/assets/Bebidas/cola.webp"
@@ -128,10 +128,21 @@ function BebidaPostre() {
         />
       </div>
 
-      <h1 className="text-center font-bold font-caprasimo text-2xl text-amber-500 md:text-3xl lg:text-4x my-2">
+      <h2 className="text-center font-bold font-caprasimo text-2xl text-white md:text-3xl lg:text-4x my-4">
         Postres
-      </h1>
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:grid-cols-4 mx-12 sm:mx-14 md:mx-1 lg:mx-24">
 
+        <PostreComponent
+          source="../src/assets/mochi.jpg"
+          nombrePostre="Mochi"
+        />
+        <PostreComponent
+          source="../src/assets/dorayaki.jpg"
+          nombrePostre="Dorayaki"
+        />
+
+      </div>
     </section>
   );
 }

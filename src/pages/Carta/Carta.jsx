@@ -1,6 +1,6 @@
 // La galería, Como una ruta que contiene el enlace a todas las otras páginas.
-import React from 'react'
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   BrowserRouter,
   Route,
@@ -13,136 +13,95 @@ import {
 function Carta() {
   return (
     <>
-      <div className= 'grid grid-cols-1 text-center sm:grid-cols-6 h-96'>
+      <div className=" w-screen grid grid-cols-1 sm:grid-cols-6">
         {/* ENTRANTES */}
-        <motion.section
-            className='relative flex flex-col items-center justify-center bg-gray-600 hover:bg-gray-200 text-white h-full cursor-pointer'
-        >
-          <motion.img
-            src="../../src/assets/Entrantes/Chicken Katsu.png"
-            className='w-60 h-70 object-cover'
-            alt='Chicken Katsu'
-            whileHover={{ scale: 1.2 }}
-          />
-         <motion.div
-          className='absolute bg-slate-300 top-0 left-0 w-full h-full flex flex-col items-center justify-center opacity-0 invisible'
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <Link
-            to="/Entrantes"
-            className="bg-transparent text-black py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
-          >
-            ENTRANTES
-          </Link>
-        </motion.div>
-        </motion.section>
 
-        {/* RAMEN */}
-        <motion.section
-          className='sm:col-span-3 relative pt-3 w-full h-full bg-slate-200 border border-white-500 text-white flex flex-col items-center justify-center cursor-pointer group'
+        <Link
+          to="/Entrantes"
+          className="relative sm:col-span-2 overflow-hidden  mx-auto group"
         >
-          <motion.img
-            src="../../src/assets/Ramen/MalaChickenRamen.png"
-            className='w-50'
-            alt='Chicken Katsu'
-            whileHover={{ scale: 1.3 }}
-          />
-          <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-blue-500 bg-opacity-70 flex flex-col items-center justify-center opacity-0 invisible"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
-            <Link
-              to="/Ramen"
-              className="bg-transparent text-white py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
-            >
-              RAMEN
-            </Link>
+          <figure className="relative w-full h-full group-hover:scale-125 duration-300">
+            <motion.img
+              src="../../src/assets/sobreNosotros.jpg"
+              className="w-full h-full"
+              alt="Entrantes"
+            />
+          </figure>
+          <motion.div className="text-3xl md:text-4xl lg:text-5xl text-white font-bold absolute inset-0 flex justify-center items-center ">
+              Entrantes
           </motion.div>
-        </motion.section>
-       
-          {/* COMBOS */}
-          <motion.section
-          className='sm:col-span-3 relative pt-3 w-full h-full bg-slate-200 border border-white-500 text-white flex flex-col items-center justify-center cursor-pointer group'
-        >
-          <motion.img
-            src="../../src/assets/Combos/ComboGyoza.png"
-            className='w-50'
-            alt='Chicken Katsu'
-            whileHover={{ scale: 1.3 }}
-          />
-          <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-blue-500 bg-opacity-70 flex flex-col items-center justify-center opacity-0 invisible"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
-            <Link
-              to="/Combos"
-              className="bg-transparent text-white py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
-            >
-              COMBOS
-            </Link>
-          </motion.div>
-        </motion.section>
+        </Link>
 
-          {/* DON STYLE */}
-          <motion.section
-          className='sm:col-span-2 sm:order-2 relative pt-3 w-full h-full bg-slate-200 border border-white-500 text-white flex flex-col items-center justify-center cursor-pointer group'
+        <Link
+          to="/Ramen"
+          className="relative sm:col-span-2 overflow-hidden  mx-auto group"
         >
-          <motion.img
-            src="../../src/assets/Don/Chicken Don.png"
-            className='w-50'
-            alt='Chicken Katsu'
-            whileHover={{ scale: 1.3 }}
-          />
-          <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-blue-500 bg-opacity-70 flex flex-col items-center justify-center opacity-0 invisible"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
-            <Link
-              to="/Don"
-              className="bg-transparent text-white py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
-            >
-              DON STYLE
-            </Link>
+          <figure className="relative w-full h-full group-hover:scale-125 duration-300">
+            <motion.img
+              src="../../src/assets/Ramen/Chicken Katsu Shoyu Ramen_Spicy Chicken Katsu Ramen.png"
+              className="w-full h-full"
+              alt="Ramen"
+            />
+          </figure>
+          <motion.div className="text-3xl md:text-4xl lg:text-5xl text-white font-bold absolute inset-0 flex justify-center items-center ">
+              Ramen
           </motion.div>
-        </motion.section>
+        </Link>
 
-          {/* POSTRES Y BEBIDAS PROXIMAMENTE */}
-          <motion.section
-          className='sm:col-span-2 sm:order-3 relative pt-3 w-full h-full bg-slate-200 border border-white-500 text-white flex flex-col items-center justify-center cursor-pointer group'
+        
+
+        <Link
+          to="/Entrantes"
+          className="relative sm:col-span-2 overflow-hidden  mx-auto group"
         >
-          <motion.img
-            src="../../src/assets/Ramen/MalaChickenRamen.png"
-            className='w-50'
-            alt='Chicken Katsu'
-            whileHover={{ scale: 1.3 }}
-          />
-          <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-blue-500 bg-opacity-70 flex flex-col items-center justify-center opacity-0 invisible"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
-            <Link
-              to="/Postres"
-              className="bg-transparent text-white py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out group-hover:block"
-            >
-              POSTRES
-            </Link>
+          <figure className="relative w-full h-full group-hover:scale-125 duration-300">
+            <motion.img
+              src="../../src/assets/Entrantes/Chicken Katsu.png"
+              className="w-full h-full"
+              alt="Entrantes"
+            />
+          </figure>
+          <motion.div className="text-3xl md:text-4xl lg:text-5xl text-white font-bold absolute inset-0 flex justify-center items-center ">
+              Combo
           </motion.div>
-        </motion.section>
+        </Link>
 
-        <motion.a href="../src/assets/Carta Buga Zaragoza.pdf" download="Carta Buga Ramen Zaragoza" className='no-underline  text-right m-6 p-2 text-2xl text-amber-600 font-bold hover:animate-bounce italic'>Descargar carta en PDF</motion.a>
+        <Link
+          to="/Don"
+          className="relative sm:col-span-3 overflow-hidden  mx-auto group"
+        >
+          <figure className="relative w-full h-full group-hover:scale-125 duration-300">
+            <motion.img
+              src="../../src/assets/sobreNosotros.jpg"
+              className="w-full h-full"
+              alt="Donbury"
+            />
+          </figure>
+          <motion.div className="text-3xl md:text-4xl lg:text-5xl text-white font-bold absolute inset-0 flex justify-center items-center ">
+              Donbury
+          </motion.div>
+        </Link>
+
+        <Link
+          to="/Entrantes"
+          className="relative sm:col-span-3 overflow-hidden mx-auto group"
+        >
+          <figure className="relative w-full h-full group-hover:scale-125 duration-300">
+            <motion.img
+              src="../../src/assets/sobreNosotros.jpg"
+              className="w-full h-full"
+              alt="Bebida y postres"
+            />
+          </figure>
+          <motion.div className="text-3xl md:text-4xl lg:text-5xl text-white font-bold absolute inset-0 flex justify-center items-center ">
+              Bebidas y Postres
+          </motion.div>
+        </Link>
       </div>
+
+      {/* <motion.a href="../src/assets/Carta Buga Zaragoza.pdf" download="Carta Buga Ramen Zaragoza" className='no-underline  text-right p-2 text-2xl text-amber-600 font-bold hover:animate-bounce italic'>Descargar carta en PDF</motion.a> */}
     </>
-  )
+  );
 }
 
-export default Carta
+export default Carta;

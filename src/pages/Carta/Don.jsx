@@ -4,7 +4,7 @@ import Comida from "../../components/Comida";
 function Don() {
   return (
     <>
-      <h1 className="text-center font-extrabold font-caprasimo text-3xl text-amber-600 my-6 drop-shadow-md ">
+      <h1 className="text-center font-extrabold font-razha text-3xl text-amber-600 my-6 drop-shadow-md ">
         Donbury Style
       </h1>
 

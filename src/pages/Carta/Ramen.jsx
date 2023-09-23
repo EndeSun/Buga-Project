@@ -6,7 +6,7 @@ import Topping from "../../components/Topping";
 function Ramen() {
   return (
     <>
-      <h1 className="text-center font-extrabold font-caprasimo text-3xl text-amber-600 my-6 drop-shadow-md ">
+      <h1 className="text-center font-extrabold font-razha text-3xl text-amber-600 my-6 drop-shadow-md ">
         Ramen
       </h1>
       <Comida
@@ -140,7 +140,7 @@ function Ramen() {
       <Comida
         source="../src/assets/Ramen/Spicy Ebi Kushi Ramen_Ebi Kushi Shoyu Ramen.png"
         foodName="Spicy Ebi Kushi"
-        foodDescription="Ramen picante con verduras, bambú, cebollino, naruto, alga y huevo marinado."
+        foodDescription="Ramen picante con gambas, verduras, bambú, cebollino, naruto, alga y huevo marinado."
         foodPrice="12.80"
         caldos={["Ebi Kushi Shoyu"]}
         gluten={true}

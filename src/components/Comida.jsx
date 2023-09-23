@@ -61,7 +61,7 @@ function Comida({
     <motion.div className="flex justify-center relative">
       {/* SECCIÓN PRINCIPAL */}
       <motion.section
-        className={`mb-6 mt-2  w-4/6 lg:w-2/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-caprasimo  shadow-2xl relative  text-center ${
+        className={`mb-6 mt-2  w-4/6 lg:w-2/6 rounded-xl  border-zinc-950 border-4 bg-slate-50 font-razha  shadow-2xl relative  text-center ${
           vegan ? "shadow-emerald-200/80" : "shadow-amber-100/80"
         }`}
         whileInView={{ x: [initialX, 0], opacity: animacion ? [0, 1] : 1 }}
@@ -86,7 +86,7 @@ function Comida({
             src={source}
             alt={foodName}
             width="90%"
-            className="sm:w-3/4 md:w-2/4 z-30"
+            className="sm:w-3/4 md:w-2/4"
           ></motion.img>
 
           {/* Etiqueta de cerdo | vegetariano */}
@@ -100,13 +100,15 @@ function Comida({
                 cerdo
                   ? "absolute right-1/4 bottom-0 z-30"
                   : gyoza_verdura
-                  ? "absolute top-5 right-4 z-30"
+                  ? "absolute top-5 right-4 sm:right-8 md:right-36 md:w-16 sm:top-3 z-30"
                   : wakame
-                  ? "absolute top-5 left-1/4 w-1/6 z-30"
-                  : "absolute top-5 right-1/4 z-30"
+                  ? "absolute top-5 left-1/4 w-1/6 md:w-[16%] z-30"
+                  : "absolute top-7 right-10 sm:right-20 md:right-[24%] md:w-[12%] z-30"
               }
             ></img>
           ) : null}
+
+
         </motion.figure>
         {/* Apartado de picante del ramen que se puede elegir*/}
         {picante && (
@@ -252,8 +254,8 @@ function Comida({
           <motion.img
             src="../src/assets/recomended.png"
             alt="recomendado"
-            width="20%"
-            className={`absolute top-10 left-1/2 md:left-0 md:top-0 z-40 ${
+            width="14%"
+            className={`absolute top-0 left-0 z-40 ${
               showDescription && "opacity-0"
             }`}
             whileInView={{
@@ -295,7 +297,7 @@ function Comida({
             ></motion.img>
 
             {/* Descripción */}
-            <div className="pr-2 mr-1 relative font-caprasimo">
+            <div className="pr-2 mr-1 relative font-razha">
               <p className="text-left text-xs rounded-sm shadow-xl shadow-yellow-400/20 p-3 sm:text-lg">
                 {foodDescription}
               </p>
