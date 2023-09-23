@@ -38,7 +38,7 @@ function Home() {
             muted
             loop
           >
-            <source src="../src/assets/Buga portada.webm" />
+            <source src="../src/assets/Bugagi.webm" />
           </video>
         </div>
       </section>
