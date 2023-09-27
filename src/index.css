@@ -29,3 +29,7 @@ footer {
 .Zaragoza-head{
   color: #f6c65e
 }
+
+video::-webkit-media-controls {
+  display: none;
+}

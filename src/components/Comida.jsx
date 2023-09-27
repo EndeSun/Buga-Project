@@ -85,6 +85,7 @@ function Comida({
           <motion.img
             src={source}
             alt={foodName}
+            loading="lazy"
             width="90%"
             className="sm:w-3/4 md:w-2/4"
           ></motion.img>
