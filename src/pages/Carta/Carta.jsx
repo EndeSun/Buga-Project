@@ -22,7 +22,7 @@ function Carta() {
         >
           <figure className="relative w-full h-full group-hover:scale-125 duration-300">
             <motion.img
-              src="../../src/assets/sobreNosotros.jpg"
+              src="../../src/assets/carta/fotoEntrante.jpg"
               className="w-full h-full"
               alt="Entrantes"
             />
@@ -38,7 +38,7 @@ function Carta() {
         >
           <figure className="relative w-full h-full group-hover:scale-125 duration-300">
             <motion.img
-              src="../../src/assets/Ramen/Chicken Katsu Shoyu Ramen_Spicy Chicken Katsu Ramen.png"
+              src="../../src/assets/carta/fotoRamen.jpg"
               className="w-full h-full"
               alt="Ramen"
             />
@@ -56,7 +56,7 @@ function Carta() {
         >
           <figure className="relative w-full h-full group-hover:scale-125 duration-300">
             <motion.img
-              src="../../src/assets/Entrantes/Chicken Katsu.png"
+              src="../../src/assets/carta/fotoCombo.jpg"
               className="w-full h-full"
               alt="Entrantes"
             />
@@ -72,7 +72,7 @@ function Carta() {
         >
           <figure className="relative w-full h-full group-hover:scale-125 duration-300">
             <motion.img
-              src="../../src/assets/sobreNosotros.jpg"
+              src="../../src/assets/carta/fotoDon.jpg"
               className="w-full h-full"
               alt="Donbury"
             />
@@ -88,7 +88,7 @@ function Carta() {
         >
           <figure className="relative w-full h-full group-hover:scale-125 duration-300">
             <motion.img
-              src="../../src/assets/sobreNosotros.jpg"
+              src="../../src/assets/carta/fotoBebidaPostre.jpg"
               className="w-full h-full"
               alt="Bebida y postres"
             />

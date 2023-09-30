@@ -131,7 +131,7 @@ function BebidaPostre() {
       <h2 className="text-center font-bold font-caprasimo text-2xl text-white md:text-3xl lg:text-4x my-4">
         Postres
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:grid-cols-4 mx-12 sm:mx-14 md:mx-1 lg:mx-24">
+      <div className="grid grid-cols-2  gap-1  mx-12 sm:mx-14 md:mx-1 lg:mx-24">
 
         <PostreComponent
           source="../src/assets/mochi.jpg"

@@ -21,16 +21,17 @@ function SobreNosotros() {
       },
     },
   };
+
   return (
     <>
-      <div className='h-full w-full bg-white  font-razha'>
+      <div className='h-full w-full bg-white font-razha'>
         {/* Seccion del Titulo con la imagen de fondo */}
         <div
-            className="bg-slate-400 bg-cover bg-center h-80"
+            className="bg-slate-400 bg-cover bg-center w-screen h-80 relative flex justify-center items-center"
             style={{ backgroundImage: `url(${imagenDeFondo})` }}
           >
           <motion.h1
-              className='mb-4 text-3xl font-extrabold text-center pt-20 text-white dark:text-white md:text-5xl lg:text-6xl'
+              className='mb-4 text-3xl font-extrabold text-white md:text-5xl lg:text-6xl '
               variants={titleVariants}
               initial='hidden'
               animate='visible'
@@ -38,21 +39,21 @@ function SobreNosotros() {
               Sobre Nosotros
           </motion.h1>
         </div>
+
         {/* Seccion de la Descripcion del restaurante */}
         <div className='h-auto mt-3'>
-          <h2 className='mb-4 text-2xl font-extrabold text-center text-black dark:text-white md:text-5xl lg:text-6xl'>Buga Ramen</h2>
+          <h2 className='mb-4 text-2xl font-extrabold text-center text-black md:text-5xl lg:text-6xl'>Buga Ramen</h2>
 
           <p className='text-black md:text-3xl mr-5 ml-5'>¡Bienvenido a Buga Ramen, donde la auténtica cocina japonesa cobra vida! Nuestros platos se destacan por la perfecta combinación de sabores y texturas, con ingredientes frescos como verduras, especias, pescados, mariscos y carnes de alta calidad que respetan nuestras tradiciones culinarias japonesas.</p>
           <p className='text-black md:text-3xl mr-5 ml-5'>En nuestra variada carta, satisfacemos todos los gustos, desde opciones veganas y vegetarianas hasta las delicias más carnívoras. Además, ofrecemos un emocionante menú diario. Ven y descubre la esencia de la cocina japonesa en Buga Ramen, donde te esperamos para compartir esta experiencia culinaria única contigo.</p>
           <p className='mt-3 mb-3 md:text-3xl font-bold text-center'>Te Esperamos!!!</p>
         </div>
+
         {/* Seccion con el collage de imagenes de comida */}
-        <div className='grid grid-cols-2 gap-4 mr-5 ml-5 pt-3'>
-          <div className='space-y-4'>
-            <img src='../../src/assets/Entrantes/Karaage/Spicy Karaage 2.png' alt='Imagen 1' className='w-full h-auto bg-black' />
-            <img src='../../src/assets/Entrantes/Karaage/Karaage 2.png' alt='Imagen 2' className='w-full h-auto bg-black' />
-          </div>
-          <img src='../../src/assets/Entrantes/Gyoza/Spicy Gyoza 2.png' alt='Imagen 3' className='w-full h-full bg-black' />
+        <div className='grid md:grid-cols-2 gap-1 mx-5 pt-3 [&>img]:rounded-xl [&>img]:shadow-xl'>
+            <img src='../../src/assets/sobreNosotros/sobre1.jpg' alt='Imagen 1' className='w-full h-full  bg-black' />
+            <img src='../../src/assets/sobreNosotros/sobre2.jpg' alt='Imagen 3' className='w-full h-full  md:col-start-2 md:row-span-2 bg-black' />
+            <img src='../../src/assets/carta/fotoCombo.jpg' alt='Imagen 2' className='w-full h-full  bg-black' />
         </div>
 
         {/* Seccion con el mapa de la ubicacion  */}

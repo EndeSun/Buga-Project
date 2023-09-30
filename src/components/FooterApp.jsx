@@ -127,7 +127,7 @@ function Footer() {
             bugaramenzaragoza1@gmail.com
           </Link>
           <Link
-            to="tel:+34666666666"
+            to="tel:+34876653536"
             className="text-white mb-4 md:  sm:p-0 pl-2 border-cyan-50 flex sm:justify-center justify-start no-underline items-center"
           >
             <svg

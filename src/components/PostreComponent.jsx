@@ -15,7 +15,7 @@ function PostreComponent({ source, nombrePostre }) {
           className="w-full"
         />
 
-        <p className=" text-white text-left text-md md:text-xl lg:text-3xl font-bold m-1 drop-shadow-2xl font-caprasimo absolute top-0 right-0">
+        <p className=" text-white text-center text-md md:text-xl lg:text-3xl font-bold m-1 drop-shadow-2xl font-caprasimoa ">
           {nombrePostre}
         </p>
       </div>

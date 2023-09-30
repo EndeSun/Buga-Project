@@ -33,7 +33,7 @@ function AvisoLegal() {
 
           <p>Denominación social: BUGA ZARAGOZA, S.L.</p>
           <p>Nombre comercial: BUGA ZARAGOZA</p>
-          <p className="text-red-400">CIF: NUMERO CIF</p>
+          <p>NIF: B10813772</p>
           <p>Domicilio: calle de San Miguel, 5, 50001, Zaragoza, España</p>
           <p>e-mail: bugaramenzaragoza1@gmail.com</p>
         </li>
